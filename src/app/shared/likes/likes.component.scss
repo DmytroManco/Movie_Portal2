@@ -1,0 +1,16 @@
+.likes-block__title{
+  border-bottom: 1px solid #000;
+}
+.thumb{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.add-dislike{
+  transform: rotate(180deg);
+}
+
+.total-likes{
+  padding: 5px;
+}

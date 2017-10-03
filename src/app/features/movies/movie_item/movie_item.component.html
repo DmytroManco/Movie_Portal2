@@ -1,0 +1,13 @@
+<div class="movie-card">
+  <div class="likes">
+    <!--<mp-likes [likes]="movie.likes">{{likes}}</mp-likes>-->
+    Likes
+  </div>
+  <div class="movie-card__info">
+    <h5 class="movie-card__title"><a href="#">{{movie.title}}</a></h5>
+    <img src="{{movie.posterUrl}}" alt="poster" class="movie-card__poster">
+  </div>
+  <div class="movie-card__rating centered">
+    Rating: {{movie.stars}}
+  </div>
+</div>
