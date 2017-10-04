@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation, Input } from '@angular/core';
-import {Movie} from "../movie.Interface";
-
+import { Movie } from "../movie.interface";
 
 @Component({
   selector: 'mp-movie-item',
@@ -9,6 +8,6 @@ import {Movie} from "../movie.Interface";
   encapsulation: ViewEncapsulation.None
 })
 
-export class MovieItemComponent {
-  @Input movie: Movie;
+export class MovieItemComponent{
+  @Input() movie: Movie;
 }

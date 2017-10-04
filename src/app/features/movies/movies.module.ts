@@ -5,6 +5,7 @@ import { CoreModule } from '../../core';
 import {MoviesService} from "../../core/services/movies.service";
 import { MovieItemModule } from './movie_item';
 import { BrowserModule } from '@angular/platform-browser';
+import { MovieDetailItemModule } from './movie_detail';
 
 @NgModule({
   declarations: [
@@ -14,14 +15,17 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     SharedModule,
     CoreModule,
-    MovieItemModule
+    MovieItemModule,
+    MovieDetailItemModule
   ],
   providers: [
-    MoviesService
+    MoviesService,
+
   ],
   exports: [
-    MoviesComponent
+    MoviesComponent,
   ]
 })
 
-export class MoviesModule { }
+export class MoviesModule {
+}

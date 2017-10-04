@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MovieItemComponent } from './movie_item.component';
+import {MovieDetailComponent } from './movie_detail.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from '../../../shared';
 
 @NgModule({
   declarations: [
-    MovieItemComponent
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -14,8 +14,8 @@ import { SharedModule } from '../../../shared';
   providers: [
   ],
   exports: [
-    MovieItemComponent
+    MovieDetailComponent
   ]
 })
 
-export class MovieItemModule { }
+export class MovieDetailItemModule { }

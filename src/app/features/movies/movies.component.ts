@@ -1,7 +1,8 @@
 import { Component, ViewEncapsulation, OnInit, Input} from '@angular/core';
 import { MoviesService } from "../../core/services/movies.service";
 import 'rxjs/Rx';
-import { Movie } from './movie.Interface';
+import { Movie } from './movie.interface';
+
 
 @Component({
   selector: 'mp-movies',
@@ -12,13 +13,16 @@ import { Movie } from './movie.Interface';
 
 export class MoviesComponent implements OnInit{
   public movies: Movie[];
-  // @Input() public movie: Movie;
+  public selectedMovie: Movie;
 
   public constructor(public service: MoviesService) {}
 
   ngOnInit(){
     this.service.fetchData().subscribe(
-      (data) => this.movies = data
+      (data) => {
+        this.movies = data;
+        this.selectedMovie = data[0];
+      }
     )
   }
 

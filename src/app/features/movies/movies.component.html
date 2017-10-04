@@ -1,12 +1,23 @@
-<div class="movies__controls">
-  <h3>Filter by</h3>
-  <mp-filter-btn>By Likes</mp-filter-btn>
-  <mp-filter-btn>By Rating</mp-filter-btn>
-  <mp-search-filter></mp-search-filter>
-</div>
+<div class="container">
+  <div class="left_side">
+    <div class="movies__controls">
+      <h3>Filter by</h3>
+      <mp-filter-btn>By Likes</mp-filter-btn>
+      <mp-filter-btn>By Rating</mp-filter-btn>
+      <mp-search-filter></mp-search-filter>
+    </div>
 
+    <div class="movies__list">
 
-<div class="movies__list" >
-  <mp-movie-item *ngFor="let movie of movies" [movie]="movie"></mp-movie-item>
+      <div *ngFor="let movie of movies">
+        <mp-movie-item [movie]="movie"></mp-movie-item>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right-side">
+    <mp-movies-detail [movie]="selectedMovie"></mp-movies-detail>
+  </div>
 </div>
 
