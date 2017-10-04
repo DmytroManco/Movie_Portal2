@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Input, EventEmitter, Output } from '@angular/core';
 import { Movie } from "../movie.interface";
 
 @Component({
@@ -10,4 +10,11 @@ import { Movie } from "../movie.interface";
 
 export class MovieItemComponent{
   @Input() movie: Movie;
+  @Output() onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
+
+  constructor() {}
+
+  selectMovie(movie: Movie) {
+    this.onMovieSelect.emit(movie);
+  }
 }

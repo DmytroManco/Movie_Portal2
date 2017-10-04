@@ -1,5 +1,6 @@
 <div class="container">
   <div class="left_side">
+
     <div class="movies__controls">
       <h3>Filter by</h3>
       <mp-filter-btn>By Likes</mp-filter-btn>
@@ -9,8 +10,8 @@
 
     <div class="movies__list">
 
-      <div *ngFor="let movie of movies">
-        <mp-movie-item [movie]="movie"></mp-movie-item>
+      <div *ngFor="let movie of movies" class="movie-item__wrapper">
+        <mp-movie-item [movie]="movie" (click)="onMovieSelect(movie, $event)"></mp-movie-item>
       </div>
 
     </div>

@@ -11,4 +11,6 @@ import { Movie } from '../movie.interface';
 
 export class MovieDetailComponent{
   @Input() movie: Movie;
+
+
 }

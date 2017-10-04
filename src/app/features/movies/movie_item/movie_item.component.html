@@ -1,12 +1,13 @@
 <div class="movie-item">
-  <div class="likes">
-    <mp-likes [likes]="movie.likes"></mp-likes>
+  <div class="movie-item__likes">
+    <mp-likes [likes]="movie?.likes"></mp-likes>
+  </div>S
+  <div class="movie-item__info">
+    <h5 class="movie-item__title"><a href="#" (click)="selectMovie(movie)" class="movie-item__link">{{movie?.title}}</a></h5>
+    <img src="{{movie?.posterUrl}}" alt="poster" class="movie-item__poster">
   </div>
-  <div class="movie-card__info">
-    <h5 class="movie-card__title"><a href="#">{{movie.title}}</a></h5>
-    <img src="{{movie.posterUrl}}" alt="poster" class="movie-card__poster">
-  </div>
-  <div class="movie-card__rating centered">
-    Rating: {{movie.stars}}
+  <div class="movie-item__rating centered">
+    Rating: {{movie?.stars}}
   </div>
 </div>
+

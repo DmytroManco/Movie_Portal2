@@ -1,0 +1,14 @@
+.movie-item{
+  display: flex;
+  flex-flow: row wrap;
+  width: 300px;
+
+  .movie-item__poster{
+    width: 100px;
+    height: 100px;
+  }
+
+  .movie-item__rating{
+    width: 100%;
+  }
+}

@@ -26,4 +26,10 @@ export class MoviesComponent implements OnInit{
     )
   }
 
+  onMovieSelect(movie, e) {
+    if(e.target.classList.contains('movie-item__link')){
+      this.selectedMovie = movie;
+    }
+  }
+
 }
