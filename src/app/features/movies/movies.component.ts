@@ -14,7 +14,7 @@ import { Movie } from './movie.interface';
 export class MoviesComponent implements OnInit{
   public movies: Movie[];
   public selectedMovie: Movie;
-
+  @Input() likes: number;
   public constructor(public service: MoviesService) {}
 
   ngOnInit(){
@@ -32,4 +32,7 @@ export class MoviesComponent implements OnInit{
     }
   }
 
+  onAddLike(){
+    console.log(this.likes);
+  }
 }

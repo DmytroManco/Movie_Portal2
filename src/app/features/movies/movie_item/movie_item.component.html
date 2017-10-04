@@ -1,7 +1,7 @@
 <div class="movie-item">
   <div class="movie-item__likes">
-    <mp-likes [likes]="movie?.likes"></mp-likes>
-  </div>S
+    <mp-likes [likes]="movie?.likes" (onAddLike)="onChangeLike($event)"></mp-likes>
+  </div>
   <div class="movie-item__info">
     <h5 class="movie-item__title"><a href="#" (click)="selectMovie(movie)" class="movie-item__link">{{movie?.title}}</a></h5>
     <img src="{{movie?.posterUrl}}" alt="poster" class="movie-item__poster">
