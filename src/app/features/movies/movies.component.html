@@ -9,9 +9,9 @@
     </div>
 
     <div class="movies__list">
-
       <div *ngFor="let movie of movies" class="movie-item__wrapper">
-        <mp-movie-item [movie]="movie" (choose)="onMovieSelect(movie, $event)"></mp-movie-item>
+        <mp-movie-item [movie]="movie" (onMovieSelect)="movieSelect($event)" (onLikeChange)="changeLikes($event)">
+        </mp-movie-item>
       </div>
 
     </div>

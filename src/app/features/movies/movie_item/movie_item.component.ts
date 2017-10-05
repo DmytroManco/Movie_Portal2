@@ -12,18 +12,17 @@ export class MovieItemComponent{
   @Input() movie: Movie;
   @Input() likes: number;
   @Output() onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
-
-  @Output() choose: EventEmitter<Movie> = new EventEmitter<Movie>();
-  @Output() onAddLike: EventEmitter<any> = new EventEmitter<any>();
+  @Output() onLikeChange: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}
 
   selectMovie(movie: Movie) {
-    this.choose.emit(movie);
+    this.onMovieSelect.emit(movie);
   }
 
-  addLike() {
-    this.onAddLike.emit(this.likes);
+  changeLikes(bool) {
+    this.selectMovie(this.movie);
+    this.onLikeChange.emit(bool);
   }
 
 }

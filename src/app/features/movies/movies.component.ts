@@ -14,6 +14,7 @@ import { Movie } from './movie.interface';
 export class MoviesComponent implements OnInit{
   public movies: Movie[];
   public selectedMovie: Movie;
+
   @Input() likes: number;
   public constructor(public service: MoviesService) {}
 
@@ -26,13 +27,12 @@ export class MoviesComponent implements OnInit{
     )
   }
 
-  onMovieSelect(movie, e) {
-    if(e.target.classList.contains('movie-item__link')){
+  movieSelect(movie) {
       this.selectedMovie = movie;
-    }
   }
 
-  onAddLike(){
-    console.log(this.likes);
+  changeLikes(bool) {
+    (bool === true) ? this.selectedMovie.likes +=1 : this.selectedMovie.likes -=1;
   }
+
 }
