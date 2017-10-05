@@ -1,11 +1,11 @@
 <div class="container">
   <div class="left_side">
-
+    <!--(onSearch)="searchMovie($event)"-->
     <div class="movies__controls centered">
       <h3>Filter by</h3>
-      <mp-filter-btn>By Likes</mp-filter-btn>
-      <mp-filter-btn>By Rating</mp-filter-btn>
-      <mp-search-filter></mp-search-filter>
+      <mp-filter-btn (click)="sortMovies('likes')">By Likes</mp-filter-btn>
+      <mp-filter-btn (click)="sortMovies('stars')">By Rating</mp-filter-btn>
+      <mp-search-filter (onSearch)="searchMovie($event)" (input)="boo()"></mp-search-filter>
     </div>
 
     <div class="movies__list">
@@ -21,4 +21,5 @@
     <mp-movies-detail [movie]="selectedMovie"></mp-movies-detail>
   </div>
 </div>
+
 

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'mp-search-filter',
@@ -7,4 +7,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 
-export class SearchComponent { }
+export class SearchComponent {
+  @Output() onSearch: EventEmitter<any> = new EventEmitter<any>();
+
+  func(value) {
+    console.log(value);
+    this.onSearch.emit(value);
+  }
+}

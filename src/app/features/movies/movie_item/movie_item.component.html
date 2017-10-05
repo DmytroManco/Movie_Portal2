@@ -8,6 +8,9 @@
   </div>
   <div class="movie-item__rating centered">
     Rating: {{movie?.stars}}
+    <mp-stars *ngFor="let star of stars" [active]="star <= _rating"
+              (rate)="onRate($event)"
+              [position]="star"></mp-stars>
   </div>
 </div>
 

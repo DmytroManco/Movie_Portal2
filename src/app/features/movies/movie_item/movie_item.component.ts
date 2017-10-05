@@ -14,7 +14,15 @@ export class MovieItemComponent{
   @Output() onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
   @Output() onLikeChange: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {}
+  @Input() starCount: number;
+  @Input() rating: number = this.movie.stars;
+  @Output() rate = new EventEmitter();
+  stars:number[] = [1,2,3,4,5];
+  _rating = this.rating;
+
+  constructor() {
+    const count = this.starCount < 0 ? 5 : this.starCount;
+  }
 
   selectMovie(movie: Movie) {
     this.onMovieSelect.emit(movie);
@@ -25,4 +33,8 @@ export class MovieItemComponent{
     this.onLikeChange.emit(bool);
   }
 
+  onRate(star) {
+    this.rate.emit(star);
+    this._rating = star;
+  }
 }

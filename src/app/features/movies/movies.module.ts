@@ -20,7 +20,6 @@ import { MovieDetailItemModule } from './movie_detail';
   ],
   providers: [
     MoviesService,
-
   ],
   exports: [
     MoviesComponent,

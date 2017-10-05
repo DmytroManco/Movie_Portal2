@@ -14,7 +14,7 @@ import { Movie } from './movie.interface';
 export class MoviesComponent implements OnInit{
   public movies: Movie[];
   public selectedMovie: Movie;
-
+  public filter;
   @Input() likes: number;
   public constructor(public service: MoviesService) {}
 
@@ -34,6 +34,16 @@ export class MoviesComponent implements OnInit{
   changeLikes(bool) {
     (bool === true) ? this.selectedMovie.likes +=1 : this.selectedMovie.likes -=1;
     this.service.updateMovie(this.selectedMovie);
+  }
+
+  sortMovies(param) {
+    (param === 'likes') ? this.movies.sort((movie1, movie2) => movie2.likes - movie1.likes)
+      : this.movies.sort((movie1, movie2) => movie2.stars - movie1.stars)
+    ;
+  }
+
+  searchMovie(filter) {
+   this.filter = filter.toLowerCase();
   }
 
 }
