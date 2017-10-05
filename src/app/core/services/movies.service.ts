@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
 import'rxjs/operator/map';
 const url = 'http://localhost:8000/movies';
@@ -14,4 +14,11 @@ export class MoviesService {
       .map((response) => response.json());
   }
 
+  public updateMovie(movie) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.put(`${url}/${movie.id}`, JSON.stringify(movie), {headers: headers})
+      .map((response) => response.json()).subscribe();
+  }
 }

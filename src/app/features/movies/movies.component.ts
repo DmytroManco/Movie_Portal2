@@ -33,6 +33,7 @@ export class MoviesComponent implements OnInit{
 
   changeLikes(bool) {
     (bool === true) ? this.selectedMovie.likes +=1 : this.selectedMovie.likes -=1;
+    this.service.updateMovie(this.selectedMovie);
   }
 
 }
