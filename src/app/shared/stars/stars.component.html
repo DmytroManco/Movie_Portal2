@@ -1,2 +1,6 @@
-<span class="star" [class.active]="active" (click)="handleRate($event)">&#9733;</span>
+<span [class]="className" *ngFor="let star of stars" (click)="changeRate(star)"
+      [className]="(movie?.stars >= star.rate) ? 'star star--active': 'star'" >
+  &#9733;
+</span>
+
 

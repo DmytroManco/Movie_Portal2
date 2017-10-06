@@ -14,8 +14,8 @@ import { Movie } from './movie.interface';
 export class MoviesComponent implements OnInit{
   public movies: Movie[];
   public selectedMovie: Movie;
-  public filter;
   @Input() likes: number;
+
   public constructor(public service: MoviesService) {}
 
   ngOnInit(){
@@ -46,6 +46,11 @@ export class MoviesComponent implements OnInit{
    this.service.filterMovie(filter).subscribe(
      (data) => this.movies = data
    );
+  }
+
+  changeRate(rate) {
+    this.selectedMovie.stars = rate;
+    this.service.updateMovie(this.selectedMovie);
   }
 
 }

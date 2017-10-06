@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation, Input} from '@angular/core';
+import { Component, ViewEncapsulation, Input } from '@angular/core';
 import 'rxjs/Rx';
 import { Movie } from '../movie.interface';
 
@@ -8,9 +8,6 @@ import { Movie } from '../movie.interface';
   styleUrls: ['./movie_detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class MovieDetailComponent{
   @Input() movie: Movie;
-
-
 }

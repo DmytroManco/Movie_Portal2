@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation, Output, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Output, EventEmitter, Input} from '@angular/core';
+import { Star } from './star.model';
 
 @Component({
   selector: 'mp-stars',
@@ -8,12 +9,23 @@ import { Component, ViewEncapsulation, Output, EventEmitter, Input, OnInit } fro
 })
 
 export class StarsComponent {
-  @Input() active: boolean;
-  @Input() position: number;
-  @Output() rate = new EventEmitter();
+  public stars: Star[] = [];
+  public starsNumber: number = 5;
 
-  handleRate() {
-    this.rate.emit(this.position);
+  @Input() public movie:any;
+  @Input() className: string = 'star';
+
+  @Output() onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {
+    let i = 0;
+    while(i < this.starsNumber){
+      this.stars.push({rate: i+1});
+      i++;
+    }
   }
 
+  changeRate(star) {
+    this.onChangeRate.emit(star.rate);
+  }
 }
