@@ -21,4 +21,15 @@ export class MoviesService {
     return this.http.put(`${url}/${movie.id}`, JSON.stringify(movie), {headers: headers})
       .map((response) => response.json()).subscribe();
   }
+
+  public sortMovies(value) {
+    return this.http.get(`${url}?_sort=${value}&_order=desc`)
+      .map((response) => response.json());
+  }
+
+  public filterMovie(filter){
+    return this.http.get(`${url}?q=${filter}`)
+      .map((response) => response.json());
+  }
+
 }

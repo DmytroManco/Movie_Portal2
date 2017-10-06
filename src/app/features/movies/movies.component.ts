@@ -37,13 +37,15 @@ export class MoviesComponent implements OnInit{
   }
 
   sortMovies(param) {
-    (param === 'likes') ? this.movies.sort((movie1, movie2) => movie2.likes - movie1.likes)
-      : this.movies.sort((movie1, movie2) => movie2.stars - movie1.stars)
-    ;
+    this.service.sortMovies(param).subscribe(
+      (data) => this.movies = data
+    );
   }
 
   searchMovie(filter) {
-   this.filter = filter.toLowerCase();
+   this.service.filterMovie(filter).subscribe(
+     (data) => this.movies = data
+   );
   }
 
 }

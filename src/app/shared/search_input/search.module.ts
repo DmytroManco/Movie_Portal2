@@ -9,5 +9,4 @@ import { SearchComponent } from './search.component';
     SearchComponent
   ]
 })
-
 export class SearchModule { }
