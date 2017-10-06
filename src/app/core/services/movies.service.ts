@@ -18,7 +18,7 @@ export class MoviesService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    return this.http.put(`${url}/${movie.id}`, JSON.stringify(movie), {headers: headers})
+    return this.http.put(`${url}/${movie.id}`, JSON.stringify(movie), {headers})
       .map((response) => response.json()).subscribe();
   }
 
@@ -27,7 +27,7 @@ export class MoviesService {
       .map((response) => response.json());
   }
 
-  public filterMovie(filter){
+  public filterMovie(filter) {
     return this.http.get(`${url}?q=${filter}`)
       .map((response) => response.json());
   }

@@ -1,15 +1,22 @@
 .movie-item{
+  padding: 10px;
   display: flex;
   flex-flow: row wrap;
-  width: 300px;
+  width: 450px;
+
+  .movie-item__likes{
+    align-self: center;
+    width: 70px;
+  }
 
   .movie-item__poster{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
   }
 
   .movie-item__rating{
     width: 100%;
+    align-self: center;
   }
 }
 

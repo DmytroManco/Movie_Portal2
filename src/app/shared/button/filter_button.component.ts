@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'mp-filter-btn',
@@ -6,7 +6,5 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
   styleUrls: ['./filter_button.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class FilterButtonComponent {
-  @Output() public onClick: EventEmitter<void> = new EventEmitter<void>();
 }

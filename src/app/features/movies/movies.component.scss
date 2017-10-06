@@ -2,17 +2,29 @@
   display: flex;
 
   .left_side{
-    width: 60%;
+    width: 55%;
+    display: flex;
+    flex-flow: column wrap;
+
+    .movies__controls{
+      align-self: center;
+
+      h3{
+        margin-bottom: 0;
+      }
+    }
 
     .movies__list{
+      margin-left: 20px;
       display: flex;
       flex-flow: row wrap;
+
     }
 
   }
 
   .right-side{
-    width: 30%;
+    width: 40%;
   }
 }
 

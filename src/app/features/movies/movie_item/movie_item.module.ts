@@ -17,5 +17,4 @@ import { SharedModule } from '../../../shared';
     MovieItemComponent
   ]
 })
-
 export class MovieItemModule { }

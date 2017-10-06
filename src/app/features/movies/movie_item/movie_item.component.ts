@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation, Input, EventEmitter, Output } from '@angular/core';
-import { Movie } from "../movie.interface";
+import { Movie } from '../movie.model';
 
 @Component({
   selector: 'mp-movie-item',
@@ -7,25 +7,25 @@ import { Movie } from "../movie.interface";
   styleUrls: ['./movie_item.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
-export class MovieItemComponent{
-  @Input() movie: Movie;
-  @Input() likes: number;
-  @Output() onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
-  @Output() onLikeChange: EventEmitter<any> = new EventEmitter<any>();
-  @Output() onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+export class MovieItemComponent {
+  @Input() public movie: Movie;
+  @Input() public likes: number;
+  @Output() public onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
+  @Output() public onLikeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}
-  selectMovie(movie: Movie) {
+
+  public selectMovie(movie: Movie): void {
     this.onMovieSelect.emit(movie);
   }
 
-  changeLikes(bool) {
+  public changeLikes(bool): void {
     this.selectMovie(this.movie);
     this.onLikeChange.emit(bool);
   }
 
-  changeRate(rate) {
+  public changeRate(rate): void {
     this.selectMovie(this.movie);
     this.onChangeRate.emit(rate);
   }

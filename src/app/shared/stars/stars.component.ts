@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Output, EventEmitter, Input} from '@angular/core';
+import { Component, ViewEncapsulation, Output, EventEmitter, Input } from '@angular/core';
 import { Star } from './star.model';
 
 @Component({
@@ -12,20 +12,20 @@ export class StarsComponent {
   public stars: Star[] = [];
   public starsNumber: number = 5;
 
-  @Input() public movie:any;
-  @Input() className: string = 'star';
+  @Input() public movie: any;
+  @Input() public className: string = 'star';
 
-  @Output() onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {
     let i = 0;
-    while(i < this.starsNumber){
-      this.stars.push({rate: i+1});
+    while (i < this.starsNumber) {
+      this.stars.push({rate: i + 1});
       i++;
     }
   }
 
-  changeRate(star) {
+  public changeRate(star): void {
     this.onChangeRate.emit(star.rate);
   }
 }

@@ -1,3 +1,3 @@
-export interface Star{
-  rate: number
+export interface Star {
+  rate: number;
 }

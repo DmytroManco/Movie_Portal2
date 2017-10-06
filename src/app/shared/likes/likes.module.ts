@@ -9,5 +9,4 @@ import { LikesComponent } from './likes.component';
     LikesComponent
   ]
 })
-
 export class LikesModule { }

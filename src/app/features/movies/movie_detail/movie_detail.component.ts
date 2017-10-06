@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Input, EventEmitter, Output } from '@angular/core';
 import 'rxjs/Rx';
-import { Movie } from '../movie.interface';
+import { Movie } from '../movie.model';
 
 @Component({
   selector: 'mp-movies-detail',
@@ -8,6 +8,10 @@ import { Movie } from '../movie.interface';
   styleUrls: ['./movie_detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MovieDetailComponent{
-  @Input() movie: Movie;
+export class MovieDetailComponent {
+  @Input() public movie: Movie;
+  @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+  public changeRate(rate) {
+    this.onChangeRate.emit(rate);
+  }
 }

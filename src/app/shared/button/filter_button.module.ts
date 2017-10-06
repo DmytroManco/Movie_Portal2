@@ -9,5 +9,4 @@ import { FilterButtonComponent } from './filter_button.component';
     FilterButtonComponent
   ]
 })
-
 export class FilterButtonModule { }

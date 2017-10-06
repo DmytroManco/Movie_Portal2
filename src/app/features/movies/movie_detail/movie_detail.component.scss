@@ -1,0 +1,30 @@
+.movie-preview{
+  padding: 10px;
+  height: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  .movie-preview__info{
+    width: 30%;
+  }
+
+  .movie-preview__desc{
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+
+    .movie-preview__poster{
+      width: 400px;
+      height: 500px;
+      align-self: center;
+      margin: 20px 0;
+    }
+
+    div{
+      width: 100%;
+      margin: 10px 0;
+    }
+
+  }
+}

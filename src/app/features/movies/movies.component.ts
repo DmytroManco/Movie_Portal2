@@ -1,8 +1,7 @@
-import { Component, ViewEncapsulation, OnInit, Input} from '@angular/core';
-import { MoviesService } from "../../core/services/movies.service";
+import { Component, ViewEncapsulation, OnInit, Input } from '@angular/core';
+import { MoviesService } from '../../core/services/movies.service';
 import 'rxjs/Rx';
-import { Movie } from './movie.interface';
-
+import { Movie } from './movie.model';
 
 @Component({
   selector: 'mp-movies',
@@ -10,45 +9,44 @@ import { Movie } from './movie.interface';
   styleUrls: ['./movies.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
-export class MoviesComponent implements OnInit{
+export class MoviesComponent implements OnInit {
   public movies: Movie[];
   public selectedMovie: Movie;
-  @Input() likes: number;
+  @Input() public likes: number;
 
   public constructor(public service: MoviesService) {}
 
-  ngOnInit(){
+  public ngOnInit() {
     this.service.fetchData().subscribe(
       (data) => {
         this.movies = data;
         this.selectedMovie = data[0];
       }
-    )
+    );
   }
 
-  movieSelect(movie) {
+  public movieSelect(movie): void {
       this.selectedMovie = movie;
   }
 
-  changeLikes(bool) {
-    (bool === true) ? this.selectedMovie.likes +=1 : this.selectedMovie.likes -=1;
+  public changeLikes(bool): void {
+    (bool === true) ? this.selectedMovie.likes += 1 : this.selectedMovie.likes -= 1;
     this.service.updateMovie(this.selectedMovie);
   }
 
-  sortMovies(param) {
+  public sortMovies(param) {
     this.service.sortMovies(param).subscribe(
       (data) => this.movies = data
     );
   }
 
-  searchMovie(filter) {
+  public searchMovie(filter) {
    this.service.filterMovie(filter).subscribe(
      (data) => this.movies = data
    );
   }
 
-  changeRate(rate) {
+  public changeRate(rate): void {
     this.selectedMovie.stars = rate;
     this.service.updateMovie(this.selectedMovie);
   }

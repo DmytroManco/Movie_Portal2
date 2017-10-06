@@ -9,10 +9,10 @@ import { Component, ViewEncapsulation, Input, Output, EventEmitter } from '@angu
 export class LikesComponent {
   @Input() public likes: number = 0;
 
-  @Output() onChangeLike: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public onChangeLike: EventEmitter<any> = new EventEmitter<any>();
   constructor() {}
 
-  changeLike(bool){
+  public changeLike(bool) {
     this.onChangeLike.emit(bool);
   }
 }

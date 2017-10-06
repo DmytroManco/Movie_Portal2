@@ -6,11 +6,10 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
   styleUrls: ['./search.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class SearchComponent {
-  @Output() onSearch: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public onSearch: EventEmitter<any> = new EventEmitter<any>();
 
-  search(filter) {
+  public search(filter) {
     this.onSearch.emit(filter);
   }
 }

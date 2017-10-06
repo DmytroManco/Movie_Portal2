@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { MoviesComponent } from './movies.component';
 import { SharedModule } from '../../shared';
 import { CoreModule } from '../../core';
-import {MoviesService} from "../../core/services/movies.service";
+import { MoviesService } from '../../core/services/movies.service';
 import { MovieItemModule } from './movie_item';
 import { BrowserModule } from '@angular/platform-browser';
 import { MovieDetailItemModule } from './movie_detail';
@@ -25,6 +25,5 @@ import { MovieDetailItemModule } from './movie_detail';
     MoviesComponent,
   ]
 })
-
 export class MoviesModule {
 }

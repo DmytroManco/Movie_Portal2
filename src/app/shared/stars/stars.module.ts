@@ -13,5 +13,4 @@ import { BrowserModule } from '@angular/platform-browser';
     StarsComponent
   ]
 })
-
 export class StarsModule { }

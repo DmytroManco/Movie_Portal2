@@ -4,8 +4,8 @@
       "id": 1,
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 5,
-      "likes": 22,
+      "stars": 3,
+      "likes": 23,
       "genres": [
         "Crime",
         "Drama"
@@ -22,8 +22,8 @@
       "id": 2,
       "title": "The Godfather",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTRmNjQ1ZDYtNDgzMy00OGE0LWE4N2YtNTkzNWQ5ZDhlNGJmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,352,500_AL_.jpg",
-      "stars": 5,
-      "likes": 17,
+      "stars": 2,
+      "likes": 18,
       "genres": [
         "Crime",
         "Drama"
@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 9,
       "genres": [
         "Crime",
@@ -58,7 +58,7 @@
       "id": 4,
       "title": "The Dark Knight",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 2,
+      "stars": 5,
       "likes": 11,
       "genres": [
         "Crime",
@@ -77,7 +77,7 @@
       "id": 5,
       "title": "12 Angry Men",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Drama"
@@ -95,7 +95,7 @@
       "title": "Schindler's List",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,333,500_AL_.jpg",
       "stars": 4,
-      "likes": 14,
+      "likes": 9,
       "genres": [
         "Drama"
       ],
@@ -148,8 +148,8 @@
       "id": 9,
       "title": "Il buono, il brutto, il cattivo",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
-      "stars": 4,
-      "likes": 15,
+      "stars": 5,
+      "likes": 30,
       "genres": [
         "Adventure"
       ],
@@ -201,7 +201,7 @@
       "id": 12,
       "title": "Star Wars: Episode V - The Empire Strikes Back",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYmViY2M2MTYtY2MzOS00YjQ1LWIzYmEtOTBiNjhlMGM0NjZjXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY500_CR0,0,322,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Adventure"
@@ -253,7 +253,7 @@
       "id": 15,
       "title": "The Lord of the Rings: The Two Towers",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY256_SX175_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Adventure",

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="left_side">
-    <div class="movies__controls centered">
-      <h3>Filter by</h3>
+    <div class="movies__controls">
+      <h3 class="centered">Filter by</h3>
       <mp-filter-btn (click)="sortMovies('likes')">By Likes</mp-filter-btn>
       <mp-filter-btn (click)="sortMovies('stars')">By Rating</mp-filter-btn>
       <mp-search-filter (onSearch)="searchMovie($event)"></mp-search-filter>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="right-side">
-    <mp-movies-detail [movie]="selectedMovie"></mp-movies-detail>
+    <mp-movies-detail [movie]="selectedMovie" (onChangeRate)="changeRate($event)"></mp-movies-detail>
   </div>
 </div>
 
