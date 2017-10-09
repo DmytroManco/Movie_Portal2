@@ -4,27 +4,22 @@
 
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
 
-  .movie-preview__info{
+  .left-side{
     width: 30%;
-  }
-
-  .movie-preview__desc{
-    width: 70%;
-    display: flex;
-    flex-flow: column wrap;
-
     .movie-preview__poster{
       width: 400px;
       height: 500px;
-      align-self: center;
       margin: 20px 0;
     }
+  }
+
+  .right_side{
+    width: 70%;
 
     div{
-      width: 100%;
-      margin: 10px 0;
+      margin: 20px 0;
     }
-
   }
 }

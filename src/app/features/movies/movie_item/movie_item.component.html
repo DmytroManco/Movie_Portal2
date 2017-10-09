@@ -3,7 +3,7 @@
     <mp-likes [likes]="movie?.likes" (onChangeLike)="changeLikes($event)"></mp-likes>
   </div>
   <div class="movie-item__info">
-    <h5 class="movie-item__title"><a href="#" (click)="selectMovie(movie)" class="movie-item__link">{{movie?.title}}</a></h5>
+    <h5 class="movie-item__title centered"><span href="" (click)="gotoDetail(movie.id)" class="movie-item__link">{{movie?.title}}</span></h5>
     <img src="{{movie?.posterUrl}}" alt="poster" class="movie-item__poster">
   </div>
   <div class="movie-item__rating centered">

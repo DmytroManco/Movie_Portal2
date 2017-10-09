@@ -32,4 +32,8 @@ export class MoviesService {
       .map((response) => response.json());
   }
 
+  public getMovie(id) {
+    return this.http.get(`${url}/${id}`)
+      .map((response) => response.json());
+  }
 }

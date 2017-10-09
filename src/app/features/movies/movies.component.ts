@@ -4,6 +4,7 @@ import 'rxjs/Rx';
 import { Movie } from './movie.model';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mp-movies',
@@ -17,7 +18,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
   @Input() public likes: number;
   private subscriptions: Subscription;
 
-  public constructor(public service: MoviesService) {}
+  public constructor(public service: MoviesService, public router: Router) {}
 
   public ngOnInit() {
     this.subscriptions = this.service.fetchData().subscribe(
@@ -52,6 +53,10 @@ export class MoviesComponent implements OnInit, OnDestroy {
   public changeRate(rate): void {
     this.selectedMovie.stars = rate;
     this.service.updateMovie(this.selectedMovie);
+  }
+
+  public gotoDetail(id) {
+    this.router.navigate(['/movie/' + id]);
   }
 
   public ngOnDestroy() {

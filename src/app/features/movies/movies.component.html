@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="left_side">
+
     <div class="movies__controls">
       <h3 class="centered">Filter by</h3>
       <mp-filter-btn (click)="sortMovies('likes')">By Likes</mp-filter-btn>
@@ -10,17 +10,11 @@
     <div class="movies__list">
       <div *ngFor="let movie of movies" class="movie-item__wrapper">
         <mp-movie-item [movie]="movie" (onMovieSelect)="movieSelect($event)"
+                       (onGotoDetail)="gotoDetail($event)"
                        (onLikeChange)="changeLikes($event)"
                         (onChangeRate)="changeRate($event)">
         </mp-movie-item>
       </div>
 
     </div>
-  </div>
-
-  <div class="right-side">
-    <mp-movies-detail [movie]="selectedMovie" (onChangeRate)="changeRate($event)"></mp-movies-detail>
-  </div>
 </div>
-
-

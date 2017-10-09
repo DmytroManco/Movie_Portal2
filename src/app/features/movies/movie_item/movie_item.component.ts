@@ -13,20 +13,21 @@ export class MovieItemComponent {
   @Output() public onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
   @Output() public onLikeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public onGotoDetail: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}
 
-  public selectMovie(movie: Movie): void {
-    this.onMovieSelect.emit(movie);
+  gotoDetail(id) {
+    this.onGotoDetail.emit(id);
   }
 
   public changeLikes(bool): void {
-    this.selectMovie(this.movie);
+    this.onMovieSelect.emit(this.movie);
     this.onLikeChange.emit(bool);
   }
 
   public changeRate(rate): void {
-    this.selectMovie(this.movie);
+    this.onMovieSelect.emit(this.movie);
     this.onChangeRate.emit(rate);
   }
 }
