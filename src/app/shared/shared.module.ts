@@ -3,6 +3,7 @@ import { FilterButtonModule } from './button';
 import { LikesModule } from './likes';
 import { SearchModule } from './search_input';
 import { StarsModule } from './stars';
+import { LayoutModule } from './layout';
 
 @NgModule({
   imports: [
@@ -10,13 +11,14 @@ import { StarsModule } from './stars';
     LikesModule,
     SearchModule,
     StarsModule,
+    LayoutModule
   ],
   exports: [
     FilterButtonModule,
     LikesModule,
     SearchModule,
     StarsModule,
-
+    LayoutModule
   ]
 })
 export class SharedModule { }

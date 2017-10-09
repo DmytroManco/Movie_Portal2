@@ -4,8 +4,8 @@
       "id": 1,
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 3,
-      "likes": 23,
+      "stars": 4,
+      "likes": 24,
       "genres": [
         "Crime",
         "Drama"
@@ -22,7 +22,7 @@
       "id": 2,
       "title": "The Godfather",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTRmNjQ1ZDYtNDgzMy00OGE0LWE4N2YtNTkzNWQ5ZDhlNGJmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,352,500_AL_.jpg",
-      "stars": 2,
+      "stars": 5,
       "likes": 18,
       "genres": [
         "Crime",
@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 5,
+      "stars": 2,
       "likes": 9,
       "genres": [
         "Crime",
@@ -78,7 +78,7 @@
       "title": "12 Angry Men",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
       "stars": 5,
-      "likes": 15,
+      "likes": 16,
       "genres": [
         "Drama"
       ],
@@ -218,7 +218,7 @@
       "id": 13,
       "title": "Forrest Gump",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjM2MwZGMtMzg3Ny00NGRkLWE4M2EtYTBiNWMzOTY0YTI4XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY500_CR0,0,378,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Drama"
@@ -235,7 +235,7 @@
       "id": 14,
       "title": "Inception",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Drama",

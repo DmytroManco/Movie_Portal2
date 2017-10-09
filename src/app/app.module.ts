@@ -28,7 +28,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { FeaturesModule } from './features/';
 import { SharedModule } from './shared/';
-import { LayoutModule } from './layout'
+// import { LayoutModule } from './layout';
 import { CoreModule } from './core/';
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -57,7 +57,6 @@ type StoreType = {
    * Import Angular's modules.
    */
   imports: [
-    LayoutModule,
     FeaturesModule,
     SharedModule,
     CoreModule,
