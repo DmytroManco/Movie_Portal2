@@ -26,10 +26,9 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { FeaturesModule } from './features/';
-import { SharedModule } from './shared/';
-// import { LayoutModule } from './layout';
-import { CoreModule } from './core/';
+import { FeaturesModule } from './features/index';
+import { SharedModule } from './shared/index';
+import { CoreModule } from './core/index';
 import '../styles/styles.scss';
 import '../styles/headings.css';
 

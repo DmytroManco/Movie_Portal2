@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { LayoutComponent } from './layout.component';
-import { HeaderModule } from './header/';
-import { FooterModule } from './footer/';
+import { HeaderModule } from './header/index';
+import { FooterModule } from './footer/index';
 
 @NgModule({
   declarations: [

@@ -11,7 +11,8 @@ export class MoviesService {
 
   public fetchData() {
     return this.http.get(url)
-      .map((response) => response.json());
+      .map((response) => response.json())
+      .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public updateMovie(movie) {
@@ -24,12 +25,14 @@ export class MoviesService {
 
   public sortMovies(value) {
     return this.http.get(`${url}?_sort=${value}&_order=desc`)
-      .map((response) => response.json());
+      .map((response) => response.json())
+      .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public filterMovie(filter) {
     return this.http.get(`${url}?q=${filter}`)
-      .map((response) => response.json());
+      .map((response) => response.json())
+      .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public getMovie(id) {

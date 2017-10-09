@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MovieItemComponent } from './movie_item.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { SharedModule } from '../../../shared';
+import { SharedModule } from '../../../shared/index';
 
 @NgModule({
   declarations: [

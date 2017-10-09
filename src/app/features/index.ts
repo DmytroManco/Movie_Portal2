@@ -1,2 +1,2 @@
 export * from './features.module';
-export * from './movies'
+export * from './movies/index'
