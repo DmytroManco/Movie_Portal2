@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'mp-layout',
@@ -6,5 +6,4 @@ import { Component, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./layout.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class LayoutComponent {}

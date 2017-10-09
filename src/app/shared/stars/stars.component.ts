@@ -7,7 +7,6 @@ import { Star } from './star.model';
   styleUrls: ['stars.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-
 export class StarsComponent {
   public stars: Star[] = [];
   public starsNumber: number = 5;
@@ -25,7 +24,7 @@ export class StarsComponent {
     }
   }
 
-  public changeRate(star): void {
+  private changeRate(star): void {
     this.onChangeRate.emit(star.rate);
   }
 }

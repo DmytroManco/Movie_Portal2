@@ -1,18 +1,17 @@
 <div class="movie-preview">
-
-
+  <h2 class="movie__title centered">{{movie?.title}}</h2>
     <div class="left-side">
-      <h4>{{movie?.title}}</h4>
       <img src="{{movie?.posterUrl}}" alt="poster" class="movie-preview__poster">
     </div>
 
     <div class="right_side">
       <div><mp-stars [movie]="movie" (onChangeRate)="changeRate($event)"></mp-stars></div>
-      <div>Likes: {{movie?.likes}}</div>
+      <div> <strong>Likes:</strong> {{movie?.likes}}</div>
       <div><strong>Director: </strong>{{movie?.director}}</div>
       <div><strong>Actors:</strong><span *ngFor="let actors of movie?.actors"> {{actors}}, </span> </div>
       <div><strong>Genres:</strong><span *ngFor="let genre of movie?.genres"> {{genre}}, </span> </div>
       <div><strong>Description: </strong>{{movie?.description}}</div>
     </div>
 
+  <a  href="/movies">Return to the Movies List</a>
 </div>

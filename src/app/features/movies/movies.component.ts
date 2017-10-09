@@ -29,37 +29,38 @@ export class MoviesComponent implements OnInit, OnDestroy {
     );
   }
 
-  public movieSelect(movie): void {
+  public ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+  }
+
+  private movieSelect(movie: Movie): void {
       this.selectedMovie = movie;
   }
 
-  public changeLikes(bool): void {
+  private changeLikes(bool: boolean): void {
     (bool === true) ? this.selectedMovie.likes += 1 : this.selectedMovie.likes -= 1;
     this.service.updateMovie(this.selectedMovie);
   }
 
-  public sortMovies(param) {
+  private sortMovies(param: string) {
     this.service.sortMovies(param).subscribe(
       (data) => this.movies = data
     );
   }
 
-  public searchMovie(filter) {
+  private searchMovie(filter: string | number) {
    this.service.filterMovie(filter).subscribe(
      (data) => this.movies = data
    );
   }
 
-  public changeRate(rate): void {
+  private changeRate(rate: number): void {
     this.selectedMovie.stars = rate;
     this.service.updateMovie(this.selectedMovie);
   }
 
-  public gotoDetail(id) {
+  private gotoDetail(id: number) {
     this.router.navigate(['/movie/' + id]);
   }
 
-  public ngOnDestroy() {
-    this.subscriptions.unsubscribe();
-  }
 }

@@ -34,6 +34,7 @@ export class MoviesService {
 
   public getMovie(id) {
     return this.http.get(`${url}/${id}`)
-      .map((response) => response.json());
+      .map((response) => response.json())
+      .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 }

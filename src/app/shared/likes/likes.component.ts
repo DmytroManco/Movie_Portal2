@@ -10,9 +10,8 @@ export class LikesComponent {
   @Input() public likes: number = 0;
 
   @Output() public onChangeLike: EventEmitter<any> = new EventEmitter<any>();
-  constructor() {}
 
-  public changeLike(bool) {
+  private changeLike(bool: boolean) {
     this.onChangeLike.emit(bool);
   }
 }

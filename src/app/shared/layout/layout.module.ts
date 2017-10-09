@@ -15,5 +15,4 @@ import { FooterModule } from './footer/';
     LayoutComponent
   ]
 })
-
 export class LayoutModule { }
