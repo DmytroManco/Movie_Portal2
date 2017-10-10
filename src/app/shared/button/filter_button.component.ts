@@ -6,5 +6,4 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./filter_button.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class FilterButtonComponent {
-}
+export class FilterButtonComponent {}

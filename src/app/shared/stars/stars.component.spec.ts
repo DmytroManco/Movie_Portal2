@@ -6,9 +6,19 @@ describe('StarsComponent', (): void => {
 
   beforeEach(() => {
     sut = new StarsComponent();
+    let changeRate: jasmine.Spy = spyOn(sut, 'changeRate');
+    sut.changeRate();
   });
 
-  it('test', () => {
-   expect(true).toBe(true);
-});
+  it('Should match interface', () => {
+   expect(sut.stars).toBeDefined();
+   expect(sut.starsNumber).toEqual(5);
+   expect(sut.className).toEqual('star');
+   expect(sut.onChangeRate).toBeDefined();
+   expect(sut.changeRate).toBeDefined();
+  });
+
+  it('Should call changeRate function', () => {
+    expect(sut.changeRate).toHaveBeenCalled();
+  });
 });

@@ -5,7 +5,7 @@
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
       "stars": 5,
-      "likes": 22,
+      "likes": 20,
       "genres": [
         "Crime",
         "Drama"
@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 12,
       "genres": [
         "Crime",
@@ -58,7 +58,7 @@
       "id": 4,
       "title": "The Dark Knight",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 5,
+      "stars": 3,
       "likes": 11,
       "genres": [
         "Crime",
@@ -111,7 +111,7 @@
       "id": 7,
       "title": "Pulp Fiction",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 4,
+      "stars": 1,
       "likes": 15,
       "genres": [
         "Crime",
@@ -129,7 +129,7 @@
       "id": 8,
       "title": "The Lord of the Rings: The Return of the King",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYWY1ZWQ5YjMtMDE0MS00NWIzLWE1M2YtODYzYTk2OTNlYWZmXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SY500_SX334_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Adventure",
