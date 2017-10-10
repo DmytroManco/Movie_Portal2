@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 12,
       "genres": [
         "Crime",
@@ -58,7 +58,7 @@
       "id": 4,
       "title": "The Dark Knight",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 3,
+      "stars": 4,
       "likes": 11,
       "genres": [
         "Crime",

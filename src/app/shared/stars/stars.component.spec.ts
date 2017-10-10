@@ -6,7 +6,7 @@ describe('StarsComponent', (): void => {
 
   beforeEach(() => {
     sut = new StarsComponent();
-    let changeRate: jasmine.Spy = spyOn(sut, 'changeRate');
+    spyOn(sut, 'changeRate');
     sut.changeRate();
   });
 
