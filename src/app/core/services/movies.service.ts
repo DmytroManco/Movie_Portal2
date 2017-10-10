@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
 import'rxjs/operator/map';
+import { Router } from '@angular/router';
 const url: string = 'http://localhost:8000/movies';
 
 @Injectable()
 export class MoviesService {
 
-  constructor(private http: Http) {}
+  constructor(private http: Http, private router: Router) {}
 
   public fetchData() {
     return this.http.get(url)
@@ -38,6 +39,9 @@ export class MoviesService {
   public getMovie(id: number) {
     return this.http.get(`${url}/${id}`)
       .map((response) => response.json())
-      .catch((error) => Observable.throw(error.json().error || 'Server error'));
+      .catch((error) => {
+        this.router.navigate(['**']);
+        return Observable.throw(error.json().error || 'Server error');
+      });
   }
 }
