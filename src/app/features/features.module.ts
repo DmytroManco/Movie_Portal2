@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { MoviesModule } from './movies';
+import { NoContentModule } from './no-content';
 
 @NgModule({
   imports: [
-    MoviesModule
+    MoviesModule,
+    NoContentModule
   ],
   exports: [
-    MoviesModule
+    MoviesModule,
+    NoContentModule
   ]
 })
 export class FeaturesModule { }
