@@ -9,11 +9,12 @@ import { Movie } from '../movie.model';
 })
 export class MovieItemComponent {
   @Input() private movie: Movie;
-  @Input() private likes: number;
   @Output() private onMovieSelect: EventEmitter<Movie> = new EventEmitter<Movie>();
   @Output() private onLikeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() private onChangeRate: EventEmitter<number> = new EventEmitter<number>();
   @Output() private onGotoDetail: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor() {}
 
   private gotoDetail(id: number) {
     this.onGotoDetail.emit(id);

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs';
 import'rxjs/operator/map';
-const url = 'http://localhost:8000/movies';
+const url: string = 'http://localhost:8000/movies';
 
 @Injectable()
 export class MoviesService {
@@ -23,19 +23,19 @@ export class MoviesService {
       .map((response) => response.json()).subscribe();
   }
 
-  public sortMovies(value) {
+  public sortMovies(value: string) {
     return this.http.get(`${url}?_sort=${value}&_order=desc`)
       .map((response) => response.json())
       .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 
-  public filterMovie(filter) {
+  public filterMovie(filter: string) {
     return this.http.get(`${url}?q=${filter}`)
       .map((response) => response.json())
       .catch((error) => Observable.throw(error.json().error || 'Server error'));
   }
 
-  public getMovie(id) {
+  public getMovie(id: number) {
     return this.http.get(`${url}/${id}`)
       .map((response) => response.json())
       .catch((error) => Observable.throw(error.json().error || 'Server error'));

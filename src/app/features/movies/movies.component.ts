@@ -48,7 +48,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
     );
   }
 
-  private searchMovie(filter: string | number) {
+  private searchMovie(filter: string) {
    this.service.filterMovie(filter).subscribe(
      (data) => this.movies = data
    );

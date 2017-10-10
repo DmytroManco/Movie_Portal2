@@ -26,11 +26,11 @@ export class MovieDetailComponent implements OnInit, OnDestroy  {
         (error) => this.router.navigate(['/']));
   }
 
-  public ngOnDestroy() {
+  public ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
   }
 
-  private changeRate(rate) {
+  private changeRate(rate: number): void {
     this.movie.stars = rate;
     this.service.updateMovie(this.movie);
   }

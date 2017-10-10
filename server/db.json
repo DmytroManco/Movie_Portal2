@@ -4,8 +4,8 @@
       "id": 1,
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 5,
-      "likes": 21,
+      "stars": 4,
+      "likes": 22,
       "genres": [
         "Crime",
         "Drama"
@@ -22,7 +22,7 @@
       "id": 2,
       "title": "The Godfather",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTRmNjQ1ZDYtNDgzMy00OGE0LWE4N2YtNTkzNWQ5ZDhlNGJmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,352,500_AL_.jpg",
-      "stars": 3,
+      "stars": 4,
       "likes": 20,
       "genres": [
         "Crime",
@@ -165,7 +165,7 @@
       "id": 10,
       "title": "Fight Club",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGY5Y2RjMmItNDg5Yy00NjUwLThjMTEtNDc2OGUzNTBiYmM1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX290_CR0,0,290,429_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 15,
       "genres": [
         "Drama"

@@ -17,14 +17,14 @@ export class StarsComponent {
   @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {
-    let i = 0;
+    let i: number = 0;
     while (i < this.starsNumber) {
       this.stars.push({rate: i + 1});
       i++;
     }
   }
 
-  private changeRate(star): void {
+  private changeRate(star: Star): void {
     this.onChangeRate.emit(star.rate);
   }
 }
