@@ -3,8 +3,8 @@
 
     <div class="movies__controls">
       <h3 class="centered">Filter by</h3>
-      <mp-filter-btn (click)="sortMovies('likes')">By Likes</mp-filter-btn>
-      <mp-filter-btn (click)="sortMovies('stars')">By Rating</mp-filter-btn>
+      <mp-filter-btn (onclickHandler)="sortMovies('likes')">By Likes</mp-filter-btn>
+      <mp-filter-btn (onclickHandler)="sortMovies('stars')">By Rating</mp-filter-btn>
       <mp-search-filter (onSearch)="searchMovie($event)"></mp-search-filter>
     </div>
 
