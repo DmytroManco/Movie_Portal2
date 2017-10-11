@@ -1,6 +1,6 @@
 import { FilterButtonComponent } from './filter_button.component';
 
-describe('FilterButtonComponent', ()=> {
+describe('FilterButtonComponent', () => {
   let sut: any;
   let onclickHandlerSpy: jasmine.Spy;
 

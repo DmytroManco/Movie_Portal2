@@ -15,10 +15,17 @@ describe('MovieItemComponent', () => {
   beforeEach(() => {
     sut = new MovieItemComponent();
     onGotoDetailSpy = spyOn(sut.onGotoDetail, 'emit');
+    onMovieSelectSpy = spyOn(sut.onMovieSelect, 'emit');
+    onLikeChangeSpy = spyOn(sut.onLikeChange, 'emit');
+    onChangeRateSpy = spyOn(sut.onChangeRate, 'emit');
 
     gotoDetailParam = 10;
+    changeLikeParam = false;
+    changeRateParam = 12;
 
     sut.gotoDetail(gotoDetailParam);
+    sut.changeLikes(changeLikeParam);
+    sut.changeRate(changeRateParam);
   });
 
   it('Should match interface', () => {
@@ -32,7 +39,17 @@ describe('MovieItemComponent', () => {
     expect(sut.changeRate).toBeDefined();
   });
 
-  it('Should emit movie id', () => {
+  it('Should emit movieId', () => {
     expect(onGotoDetailSpy).toHaveBeenCalledWith(gotoDetailParam);
+  });
+
+  it('Should emit likes and selectedMovie', () => {
+    expect(onLikeChangeSpy).toHaveBeenCalledWith(changeLikeParam);
+    expect(onMovieSelectSpy).toHaveBeenCalled();
+  });
+
+  it('Should emit rate and selectedMovie', () => {
+    expect(onChangeRateSpy).toHaveBeenCalledWith(changeRateParam);
+    expect(onMovieSelectSpy).toHaveBeenCalled();
   });
 });
