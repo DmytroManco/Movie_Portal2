@@ -2,11 +2,15 @@ import { LikesComponent } from './likes.component';
 
 describe('Likes Component', () => {
   let sut: any;
+  let changeLikeParam: boolean;
+  let onChangeLikeSpy: jasmine.Spy;
 
   beforeEach(() => {
     sut = new LikesComponent();
-    spyOn(sut, 'changeLike');
-    sut.changeLike();
+    changeLikeParam = false;
+    onChangeLikeSpy = spyOn(sut.onChangeLike, 'emit');
+
+    sut.changeLike(changeLikeParam);
   });
 
   it('Should match interface', () => {
@@ -15,7 +19,7 @@ describe('Likes Component', () => {
     expect(sut.likes).toEqual(0);
   });
 
-  it('Should call changeLike function', () => {
-    expect(sut.changeLike).toHaveBeenCalled();
+  it('Should emit boolean', () => {
+    expect(onChangeLikeSpy).toHaveBeenCalledWith(changeLikeParam);
   });
 });

@@ -2,12 +2,15 @@ import { StarsComponent } from './stars.component';
 
 describe('StarsComponent', (): void => {
   let sut: any;
-  let serviceSpy: any;
+  let changeRateParam: any;
+  let onChangeRateSpy: jasmine.Spy;
 
   beforeEach(() => {
     sut = new StarsComponent();
-    spyOn(sut, 'changeRate');
-    sut.changeRate();
+    changeRateParam = {rate: 2};
+    onChangeRateSpy = spyOn(sut.onChangeRate, 'emit');
+
+    sut.changeRate(changeRateParam);
   });
 
   it('Should match interface', () => {
@@ -18,7 +21,7 @@ describe('StarsComponent', (): void => {
    expect(sut.changeRate).toBeDefined();
   });
 
-  it('Should call changeRate function', () => {
-    expect(sut.changeRate).toHaveBeenCalled();
+  it('Should emit rating', () => {
+    expect(onChangeRateSpy).toHaveBeenCalledWith(changeRateParam.rate);
   });
 });

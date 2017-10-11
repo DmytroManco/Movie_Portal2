@@ -2,11 +2,14 @@ import { SearchComponent } from './search.component';
 
 describe('Search Component', () => {
   let sut: any;
+  let filter: string = 'boo';
+  let spyOnSearch: jasmine.Spy;
 
   beforeEach(() => {
     sut = new SearchComponent();
-    spyOn(sut, 'search');
-    sut.search();
+    spyOnSearch = spyOn(sut.onSearch, 'emit');
+
+    sut.search(filter);
   });
 
   it('Should match interface', () => {
@@ -14,7 +17,7 @@ describe('Search Component', () => {
     expect(sut.onSearch).toBeDefined();
   });
 
-  it('Should be called search function', () => {
-    expect(sut.search).toHaveBeenCalled();
+  it('Should be emit string', () => {
+    expect(spyOnSearch).toHaveBeenCalledWith(filter);
   });
 });
