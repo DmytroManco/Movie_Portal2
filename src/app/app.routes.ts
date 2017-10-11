@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { MoviesComponent } from './features';
-import { MovieDetailComponent } from './features';
-import { NoContentComponent } from './features';
+import { MoviesRouter } from './features';
+import { MovieDetailRouter } from './features';
+import {  NoContentRouter } from './features';
+
 export const ROUTES: Routes = [
-  {path: 'movies', component: MoviesComponent},
-  {path: '', redirectTo: '/movies', pathMatch: 'full'},
-  {path: 'movie/:id', component: MovieDetailComponent},
-  {path: '**', component:  NoContentComponent}
+  ...MoviesRouter,
+  ...MovieDetailRouter,
+  ...NoContentRouter
 ];

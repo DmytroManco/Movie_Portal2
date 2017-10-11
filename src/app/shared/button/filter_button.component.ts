@@ -7,9 +7,9 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
   encapsulation: ViewEncapsulation.None
 })
 export class FilterButtonComponent {
-  @Output() public onclickHandler: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public onclickHandler: EventEmitter<Event> = new EventEmitter<Event>();
 
-  private clickHandler($event) {
+  private clickHandler($event: Event) {
     this.onclickHandler.emit($event);
   }
 }
