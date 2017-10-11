@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 12,
       "genres": [
         "Crime",
@@ -148,7 +148,7 @@
       "id": 9,
       "title": "Il buono, il brutto, il cattivo",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 30,
       "genres": [
         "Adventure"
@@ -218,7 +218,7 @@
       "id": 13,
       "title": "Forrest Gump",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYThjM2MwZGMtMzg3Ny00NGRkLWE4M2EtYTBiNWMzOTY0YTI4XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_SY500_CR0,0,378,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 18,
       "genres": [
         "Drama"
@@ -253,7 +253,7 @@
       "id": 15,
       "title": "The Lord of the Rings: The Two Towers",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY256_SX175_AL_.jpg",
-      "stars": 5,
+      "stars": 3,
       "likes": 15,
       "genres": [
         "Adventure",

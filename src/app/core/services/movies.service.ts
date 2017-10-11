@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import'rxjs/operator/map';
 import { Router } from '@angular/router';
@@ -12,8 +12,8 @@ export class MoviesService {
 
   public fetchData() {
     return this.http.get(url)
-      .map((response) => response.json())
-      .catch((error) => Observable.throw(error.json().error || 'Server error'));
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public updateMovie(movie) {
@@ -21,25 +21,25 @@ export class MoviesService {
     headers.append('Content-Type', 'application/json');
 
     return this.http.put(`${url}/${movie.id}`, JSON.stringify(movie), {headers})
-      .map((response) => response.json()).subscribe();
+      .map((response: Response) => response.json()).subscribe();
   }
 
   public sortMovies(value: string) {
     return this.http.get(`${url}?_sort=${value}&_order=desc`)
-      .map((response) => response.json())
-      .catch((error) => Observable.throw(error.json().error || 'Server error'));
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public filterMovie(filter: string) {
     return this.http.get(`${url}?q=${filter}`)
-      .map((response) => response.json())
-      .catch((error) => Observable.throw(error.json().error || 'Server error'));
+      .map((response: Response) => response.json())
+      .catch((error: Response) => Observable.throw(error.json().error || 'Server error'));
   }
 
   public getMovie(id: number) {
     return this.http.get(`${url}/${id}`)
-      .map((response) => response.json())
-      .catch((error) => {
+      .map((response: Response) => response.json())
+      .catch((error: Response) => {
         this.router.navigate(['**']);
         return Observable.throw(error.json().error || 'Server error');
       });
