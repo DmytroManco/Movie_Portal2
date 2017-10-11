@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, Output, EventEmitter, Input } from '@angular/core';
 import { Star } from './star.model';
+import { Movie } from '../../features/movies/movie.model';
 
 @Component({
   selector: 'mp-stars',
@@ -11,7 +12,7 @@ export class StarsComponent {
   public stars: Star[] = [];
   public starsNumber: number = 5;
 
-  @Input() public movie: any;
+  @Input() public movie: Movie;
   @Input() public className: string = 'star';
 
   @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();

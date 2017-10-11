@@ -4,7 +4,7 @@
       "id": 1,
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 20,
       "genres": [
         "Crime",
@@ -22,7 +22,7 @@
       "id": 2,
       "title": "The Godfather",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTRmNjQ1ZDYtNDgzMy00OGE0LWE4N2YtNTkzNWQ5ZDhlNGJmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,352,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 20,
       "genres": [
         "Crime",
@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 12,
       "genres": [
         "Crime",
@@ -111,7 +111,7 @@
       "id": 7,
       "title": "Pulp Fiction",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 1,
+      "stars": 4,
       "likes": 15,
       "genres": [
         "Crime",
@@ -130,7 +130,7 @@
       "title": "The Lord of the Rings: The Return of the King",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYWY1ZWQ5YjMtMDE0MS00NWIzLWE1M2YtODYzYTk2OTNlYWZmXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SY500_SX334_AL_.jpg",
       "stars": 5,
-      "likes": 15,
+      "likes": 16,
       "genres": [
         "Adventure",
         "Drama",
@@ -235,7 +235,7 @@
       "id": 14,
       "title": "Inception",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 18,
       "genres": [
         "Drama",

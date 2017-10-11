@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
   encapsulation: ViewEncapsulation.None
 })
 export class SearchComponent {
-  @Output() public onSearch: EventEmitter<any> = new EventEmitter<any>();
+  @Output() public onSearch: EventEmitter<string> = new EventEmitter<string>();
 
   private search(filter: string) {
     this.onSearch.emit(filter);

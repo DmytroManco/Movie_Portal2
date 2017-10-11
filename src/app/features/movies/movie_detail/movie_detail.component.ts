@@ -19,7 +19,7 @@ export class MovieDetailComponent implements OnInit, OnDestroy  {
 
   public ngOnInit() {
     this.subscriptions = this.route.paramMap
-      .switchMap((params: ParamMap) => this.service.getMovie(+params.get('id')))
+      .switchMap((params: ParamMap) => this.service.getMovie(parseInt(params.get('id'), 10)))
       .subscribe(
         (movie) => this.movie = movie);
   }

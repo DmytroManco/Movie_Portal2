@@ -4,8 +4,8 @@ export interface Movie {
   posterUrl: string;
   stars: number;
   likes: number;
-  genres: any;
-  actors: any;
+  genres: string[];
+  actors: string[];
   director: string;
   description: string;
 }
