@@ -5,7 +5,7 @@
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
       "stars": 4,
-      "likes": 20,
+      "likes": 19,
       "genres": [
         "Crime",
         "Drama"
@@ -22,8 +22,8 @@
       "id": 2,
       "title": "The Godfather",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTRmNjQ1ZDYtNDgzMy00OGE0LWE4N2YtNTkzNWQ5ZDhlNGJmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,352,500_AL_.jpg",
-      "stars": 4,
-      "likes": 20,
+      "stars": 5,
+      "likes": 22,
       "genres": [
         "Crime",
         "Drama"
@@ -40,8 +40,8 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 5,
-      "likes": 12,
+      "stars": 4,
+      "likes": 13,
       "genres": [
         "Crime",
         "Drama"
@@ -77,7 +77,7 @@
       "id": 5,
       "title": "12 Angry Men",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 16,
       "genres": [
         "Drama"
@@ -129,7 +129,7 @@
       "id": 8,
       "title": "The Lord of the Rings: The Return of the King",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BYWY1ZWQ5YjMtMDE0MS00NWIzLWE1M2YtODYzYTk2OTNlYWZmXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SY500_SX334_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 16,
       "genres": [
         "Adventure",
@@ -148,7 +148,7 @@
       "id": 9,
       "title": "Il buono, il brutto, il cattivo",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 30,
       "genres": [
         "Adventure"
@@ -235,7 +235,7 @@
       "id": 14,
       "title": "Inception",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 18,
       "genres": [
         "Drama",
@@ -253,7 +253,7 @@
       "id": 15,
       "title": "The Lord of the Rings: The Two Towers",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY256_SX175_AL_.jpg",
-      "stars": 3,
+      "stars": 4,
       "likes": 15,
       "genres": [
         "Adventure",
