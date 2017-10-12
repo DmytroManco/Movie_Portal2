@@ -30,7 +30,7 @@ describe('StarsComponent', (): void => {
       sut.ngOnInit();
     });
 
-    it('Should equal to 5 length of stars arr', () => {
+    it('Should equal 5 the length of stars array', () => {
       expect(sut.stars.length).toBe(5);
     });
   });

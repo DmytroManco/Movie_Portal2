@@ -1,4 +1,5 @@
 import { MoviesService } from './movies.service';
+import { Observable } from 'rxjs/Observable';
 
 describe('MoviesService', () => {
   let sut: any;
@@ -11,7 +12,7 @@ describe('MoviesService', () => {
   let movieIdMock: any;
 
   const urlMock = 'very important url';
-  const mockResponse = Symbol('some response');
+  const mockResponse = Observable.of('test');
 
   beforeEach(() => {
 
@@ -32,11 +33,9 @@ describe('MoviesService', () => {
     mockServerResponse = jasmine.createSpyObj('mockServerResponse', ['json']);
     mockMapResponse = jasmine.createSpyObj('mockMapResponse', ['map']);
     mockRouter = jasmine.createSpyObj('Router', ['navigate']);
-    // mockCatchResponse = jasmine.createSpyObj('mockCatchResponse', ['catch']);
 
     mockMapResponse.map.and.returnValue(mockResponse);
 
-    // mockCatchResponse.catch.and.returnValue(mockResponse);
     sut = new MoviesService(httpMock, mockRouter);
     sut.url = urlMock;
   });
@@ -46,7 +45,7 @@ describe('MoviesService', () => {
       httpMock.get.and.returnValue(mockMapResponse);
     });
 
-    xit('Do it sooooka', () => {
+    it('Do it sooooka', () => {
       sut.fetchData();
       expect(httpMock.get).toHaveBeenCalledWith(sut.url);
     });
