@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Output, EventEmitter, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Output, OnInit, EventEmitter, Input } from '@angular/core';
 import { Star } from './star.model';
 import { Movie } from '../../features/movies/movie.model';
 
@@ -8,7 +8,7 @@ import { Movie } from '../../features/movies/movie.model';
   styleUrls: ['stars.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class StarsComponent {
+export class StarsComponent implements OnInit {
   public stars: Star[] = [];
   public starsNumber: number = 5;
 
@@ -17,15 +17,22 @@ export class StarsComponent {
 
   @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() {
+  constructor() {}
+
+  public ngOnInit() {
+    this.makeStarsArray();
+  }
+
+  private changeRate(star: Star): void {
+    this.onChangeRate.emit(star.rate);
+  }
+
+  private makeStarsArray(): Star[] {
     let i: number = 0;
     while (i < this.starsNumber) {
       this.stars.push({rate: i + 1});
       i++;
     }
-  }
-
-  private changeRate(star: Star): void {
-    this.onChangeRate.emit(star.rate);
+    return this.stars;
   }
 }

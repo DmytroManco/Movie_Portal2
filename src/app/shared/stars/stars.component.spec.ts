@@ -24,4 +24,14 @@ describe('StarsComponent', (): void => {
   it('Should emit rating', () => {
     expect(onChangeRateSpy).toHaveBeenCalledWith(changeRateParam.rate);
   });
+
+  describe('#NgOnInit', () => {
+    beforeEach(() => {
+      sut.ngOnInit();
+    });
+
+    it('Should equal to 5 length of stars arr', () => {
+      expect(sut.stars.length).toBe(5);
+    });
+  });
 });
