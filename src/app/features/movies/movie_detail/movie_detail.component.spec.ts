@@ -37,7 +37,7 @@ describe('MovieDetailComponent', () => {
 
     observableSpy = jasmine.createSpy('subscribe');
     response = Symbol('response');
-    routeSpy = jasmine.createSpy('navigate');
+    routeSpy = jasmine.createSpy('paramMap');
     serviceSpy = {
       getMovie: jasmine.createSpy('getMovie').and.returnValue(observableMock),
       updateMovie: jasmine.createSpy('updateMovie').and.returnValue(observableMock)
@@ -57,17 +57,29 @@ describe('MovieDetailComponent', () => {
 
   describe('#changeRate', () => {
     let changeRatePram: number;
-    // let spy: any;
+
     beforeEach(() => {
       changeRatePram = 5;
       sut.movie = movieMock;
-      spyOn(sut, 'changeRate');
       sut.changeRate(changeRatePram);
     });
 
-    it('Should change rate and update to the server', () => {
-      expect(sut.changeRate).toHaveBeenCalledWith(changeRatePram);
-      expect(sut.service.updateMovie).toHaveBeenCalled();
+    it('Should set right rating', () => {
+      expect(sut.movie.stars).toBe(changeRatePram);
+    });
+
+    it('Should update movie rating', () => {
+      expect(serviceSpy.updateMovie).toHaveBeenCalled();
+    });
+  });
+
+  describe('#ngOnDestroy', () => {
+    it('Should call unsubscribe', () => {
+      sut.subscriptions = {
+        unsubscribe: jasmine.createSpy('unsubscribe')
+      };
+      sut.ngOnDestroy();
+      expect(sut.subscriptions.unsubscribe).toHaveBeenCalled();
     });
   });
 });
