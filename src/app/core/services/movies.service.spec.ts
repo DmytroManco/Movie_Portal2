@@ -40,14 +40,74 @@ describe('MoviesService', () => {
     sut.url = urlMock;
   });
 
+  it('Should match interface', () => {
+    expect(sut.url).toBeDefined();
+    expect(sut.getMovie).toBeDefined();
+    expect(sut.fetchData).toBeDefined();
+    expect(sut.updateMovie).toBeDefined();
+    expect(sut.filterMovie).toBeDefined();
+    expect(sut.sortMovies).toBeDefined();
+    expect(sut.getMovie).toBeDefined();
+    expect(sut.returnError).toBeDefined();
+    expect(sut.returnData).toBeDefined();
+  });
+
   describe('#fetchData', () => {
     beforeEach(() => {
       httpMock.get.and.returnValue(mockMapResponse);
     });
 
-    it('Do it sooooka', () => {
+    it('Should call http.get function', () => {
       sut.fetchData();
       expect(httpMock.get).toHaveBeenCalledWith(sut.url);
     });
+  });
+
+  describe('#updateMovie', () => {
+    beforeEach(() => {
+      httpMock.put.and.returnValue(mockMapResponse);
+    });
+
+    it('Should call updateMovie', () => {
+      sut.movie = movieMock;
+      sut.updateMovie(movieMock);
+      expect(httpMock.put).toHaveBeenCalled();
+    });
+  });
+
+  describe('#filterMovie', () => {
+    beforeEach(() => {
+      httpMock.get.and.returnValue(mockMapResponse);
+    });
+
+    it('Should call http.get function', () => {
+      sut.filterMovie();
+      expect(httpMock.get).toHaveBeenCalled();
+    });
+  });
+
+  describe('#sortMovies', () => {
+    beforeEach(() => {
+      httpMock.get.and.returnValue(mockMapResponse);
+    });
+
+    it('Should call http.get function', () => {
+      sut.sortMovies();
+      expect(httpMock.get).toHaveBeenCalled();
+    });
+  });
+
+  describe('#getMovie', () => {
+    beforeEach(() => {
+      httpMock.get.and.returnValue(mockMapResponse);
+    });
+
+    it('Should call http.get function', () => {
+      sut.getMovie();
+      expect(httpMock.get).toHaveBeenCalled();
+    });
+  });
+
+  describe('#returnData', () => {
   });
 });
