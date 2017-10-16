@@ -1,1 +1,28 @@
-<h2>Hola, I'am movie component</h2>
+<h2>Add movies</h2>
+
+<form [formGroup]="movieForm" (submit)="postData(movieForm, $event)">
+  <label for="add__title">Movie Title</label>
+  <input type="text" id="add__title" name="movie-title" formControlName="title"> <br>
+
+  <label for="add__posterUrl">Movie poster</label>
+  <input type="url" id="add__posterUrl" name="poster-url" formControlName="poster"><br>
+
+  <label for="add__director">Director: </label>
+  <input type="text" id="add__director" name="add director" formControlName="director"><br>
+
+
+  <label for="add__actors">Actors</label>
+  <input type="text" id="add__actors" name="add actors" formControlName="actors"><br>
+
+  <label for="add__genres">Actors</label>
+  <input type="text" id="add__genres" name="add__genres" formControlName="genres"><br>
+
+  <label for="add__description">Add movie description</label> <br>
+  <textarea name="movie description" id="add__description" cols="30" rows="10" formControlName="description"></textarea>
+  <br>
+
+  <button type="submit" [disabled]="movieForm.invalid">Add Movie!</button>
+</form>
+
+
+<a href="/movies">Home</a>

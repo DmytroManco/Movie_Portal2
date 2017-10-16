@@ -46,6 +46,13 @@ export class MoviesService {
       });
   }
 
+  public postData(data) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post(`${this.url}`, JSON.stringify(data), {headers})
+      .map(this.returnData).subscribe();
+  }
+
   private returnData(response): Observable<Movie> {
     return response.json();
   }
