@@ -13,8 +13,8 @@ export class MoviesService {
 
   public fetchData(): Observable<Movie[]> {
     return this.http.get(this.url)
-      .map((response: Response) => this.returnData(response))
-      .catch((error: Response) => this.returnError(error));
+      .map(this.returnData)
+      .catch(this.returnError);
   }
 
   public updateMovie(movie: Movie) {
@@ -22,24 +22,24 @@ export class MoviesService {
     headers.append('Content-Type', 'application/json');
 
     return this.http.put(`${this.url}/${movie.id}`, JSON.stringify(movie), {headers})
-      .map((response: Response) => this.returnData(response)).subscribe();
+      .map(this.returnData).subscribe();
   }
 
   public sortMovies(value: string): Observable<Movie[]>  {
     return this.http.get(`${this.url}?_sort=${value}&_order=desc`)
-      .map((response: Response) => this.returnData(response))
-      .catch((error: Response) => this.returnError(error));
+      .map(this.returnData)
+      .catch(this.returnError);
   }
 
   public filterMovie(filter: string): Observable<Movie[]>  {
     return this.http.get(`${this.url}?q=${filter}`)
-      .map((response: Response) => this.returnData(response))
-      .catch((error: Response) => this.returnError(error));
+      .map(this.returnData)
+      .catch(this.returnError);
   }
 
   public getMovie(id: number): Observable<Movie> {
     return this.http.get(`${this.url}/${id}`)
-      .map((response: Response) => this.returnData(response))
+      .map(this.returnData)
       .catch((error: Response) => {
         this.router.navigate(['**']);
         return this.returnError(error);

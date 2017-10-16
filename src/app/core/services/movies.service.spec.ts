@@ -109,5 +109,21 @@ describe('MoviesService', () => {
   });
 
   describe('#returnData', () => {
+    it('Should return response in json format', () => {
+      expect(sut.returnData(mockServerResponse)).toEqual(mockServerResponse.json());
+    });
+  });
+
+  describe('#returnError', () => {
+    let response: any;
+    beforeEach(() => {
+      response = Symbol('a');
+      mockServerResponse.json.and.returnValue(response);
+    });
+
+    it('Should return Observable error', () => {
+      expect(sut.returnError(mockServerResponse)).
+      toEqual(Observable.throw(mockServerResponse.json().error || 'Server error'));
+    });
   });
 });

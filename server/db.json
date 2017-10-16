@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 13,
       "genres": [
         "Crime",
@@ -77,7 +77,7 @@
       "id": 5,
       "title": "12 Angry Men",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 16,
       "genres": [
         "Drama"
@@ -95,7 +95,7 @@
       "title": "Schindler's List",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,333,500_AL_.jpg",
       "stars": 5,
-      "likes": 9,
+      "likes": 10,
       "genres": [
         "Drama"
       ],
