@@ -11,6 +11,12 @@
     cursor: pointer;
   }
 
+  .thumb:hover{
+    width: 25px;
+    height: 25px;
+    transition: .6s;
+  }
+
   .add-dislike{
     transform: rotate(180deg);
   }

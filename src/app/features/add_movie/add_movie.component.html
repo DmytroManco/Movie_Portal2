@@ -1,28 +1,39 @@
-<h2>Add movies</h2>
+<mp-layout>
 
-<form [formGroup]="movieForm" (submit)="postData(movieForm, $event)">
-  <label for="add__title">Movie Title</label>
-  <input type="text" id="add__title" name="movie-title" formControlName="title"> <br>
+  <form [formGroup]="movieForm" (submit)="postData(movieForm, $event)">
 
-  <label for="add__posterUrl">Movie poster</label>
-  <input type="url" id="add__posterUrl" name="poster-url" formControlName="poster"><br>
+    <table>
+      <tr>
+        <td><label for="add__title">Movie Title</label></td>
+        <td><input type="text" id="add__title" name="movie-title" formControlName="title"></td>
+      </tr>
 
-  <label for="add__director">Director: </label>
-  <input type="text" id="add__director" name="add director" formControlName="director"><br>
+      <tr>
+        <td> <label for="add__posterUrl">Movie poster url</label></td>
+        <td><input type="url" id="add__posterUrl" name="poster-url" formControlName="poster"></td>
+      </tr>
+
+      <tr>
+        <td><label for="add__director">Director: </label></td>
+        <td><input type="text" id="add__director" name="add director" formControlName="director"></td>
+      </tr>
+      <tr>
+        <td><label for="add__actors">Actors</label></td>
+        <td><input type="text" id="add__actors" name="add actors" formControlName="actors"></td>
+      </tr>
+      <tr>
+        <td><label for="add__genres">Genres</label></td>
+        <td><input type="text" id="add__genres" name="add__genres" formControlName="genres"></td>
+      </tr>
+      <tr>
+        <td><label for="add__description">Add movie description</label> </td>
+        <td><textarea name="movie description" id="add__description" formControlName="description"></textarea></td>
+      </tr>
+    </table>
+
+    <button type="submit" [disabled]="movieForm.invalid">Add Movie!</button>
+  </form>
 
 
-  <label for="add__actors">Actors</label>
-  <input type="text" id="add__actors" name="add actors" formControlName="actors"><br>
-
-  <label for="add__genres">Actors</label>
-  <input type="text" id="add__genres" name="add__genres" formControlName="genres"><br>
-
-  <label for="add__description">Add movie description</label> <br>
-  <textarea name="movie description" id="add__description" cols="30" rows="10" formControlName="description"></textarea>
-  <br>
-
-  <button type="submit" [disabled]="movieForm.invalid">Add Movie!</button>
-</form>
-
-
-<a href="/movies">Home</a>
+  <a href="/movies">Home</a>
+</mp-layout>

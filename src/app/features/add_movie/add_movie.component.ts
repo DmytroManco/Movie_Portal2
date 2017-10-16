@@ -1,10 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MoviesService } from '../../core/services/movies.service';
-import { Movie } from '../movies/index';
 
 @Component({
-  selector: 'mp-movie-item',
+  selector: 'mp-addMovie',
   templateUrl: 'add_movie.component.html',
   styleUrls: ['add_movie.component.scss'],
   encapsulation: ViewEncapsulation.None
