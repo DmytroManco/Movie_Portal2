@@ -8,7 +8,6 @@ describe('MoviesService', () => {
   let mockMapResponse: any;
   let mockRouter: any;
   let movieMock: any;
-  let mockCatchResponse: any;
   let movieIdMock: any;
 
   const urlMock = 'very important url';
