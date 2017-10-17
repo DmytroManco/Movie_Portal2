@@ -39,6 +39,7 @@ export class AddMovieComponent {
       description: dataObj.description
     };
 
+    this.movieForm.reset();
     this.service.postData(movie);
   }
 
