@@ -12,7 +12,9 @@
           <input type="text" id="add__title" name="movie-title" formControlName="title">
         </td>
         <td>
-          <span *ngIf="movieForm.controls.title.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.title.errors?.required">Required filed</span>
+          </div>
         </td>
       </tr>
 
@@ -24,7 +26,9 @@
           <input type="url" id="add__posterUrl" name="poster-url" formControlName="poster">
         </td>
         <td>
-          <span *ngIf="movieForm.controls.poster.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.poster.errors?.required">Required filed</span>
+          </div>
         </td>
       </tr>
 
@@ -36,7 +40,9 @@
           <input type="text" id="add__director" name="add director" formControlName="director">
         </td>
         <td>
-          <span *ngIf="movieForm.controls.director.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.director.errors?.required">Required filed</span>
+          </div>
         </td>
       </tr>
 
@@ -48,7 +54,9 @@
           <input type="text" id="add__actors" name="add actors" formControlName="actors">
         </td>
         <td>
-          <span *ngIf="movieForm.controls.actors.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.actors.errors?.required">Required filed</span>
+          </div>
         </td>
       </tr>
 
@@ -60,7 +68,9 @@
           <input type="text" id="add__genres" name="add__genres" formControlName="genres">
         </td>
         <td>
-          <span *ngIf="movieForm.controls.genres.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.genres.errors?.required">Required filed</span>
+          </div>
         </td>
       </tr>
 
@@ -72,7 +82,10 @@
           <textarea name="movie description" id="add__description" formControlName="description"></textarea>
         </td>
         <td>
-          <span *ngIf="movieForm.controls.description.errors?.required">Required filed</span>
+          <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
+            <span *ngIf="movieForm.controls.description.errors?.required">Required filed</span>
+            <span *ngIf="movieForm.controls.description.errors?.maxlength">Max length > 100 character :( </span>
+          </div>
         </td>
       </tr>
     </table>

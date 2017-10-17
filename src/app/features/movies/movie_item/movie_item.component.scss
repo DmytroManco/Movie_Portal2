@@ -1,8 +1,10 @@
 .movie-item{
   padding: 10px;
+  margin: 5px;
   display: flex;
   flex-flow: row wrap;
   width: 450px;
+  box-shadow: inset 0 0 1px 1px #00838F;
 
   .movie-item__likes{
     align-self: center;

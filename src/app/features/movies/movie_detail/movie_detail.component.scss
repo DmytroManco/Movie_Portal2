@@ -16,7 +16,7 @@
     width: 30%;
     float: left;
     .movie-preview__poster{
-      width: 400px;
+      max-width: 400px;
       height: 500px;
       margin: 20px auto;
     }

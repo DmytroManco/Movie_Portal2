@@ -9,14 +9,15 @@ import { MoviesService } from '../../core/services/movies.service';
   encapsulation: ViewEncapsulation.None
 })
 export class AddMovieComponent {
-  // public movie: Movie;
+
   public movieForm = new FormGroup({
     title: new FormControl('', [Validators.required]),
-    poster: new FormControl('', [Validators.required]),
-    description: new FormControl('', [Validators.required]),
+    poster: new FormControl('', [Validators.required,
+      Validators.pattern(/^(http|https):\/\/[^ "]+$/)]),
+    description: new FormControl('', [Validators.required, Validators.maxLength(100)]),
     director: new FormControl('', [Validators.required]),
     actors: new FormControl('', [Validators.required]),
-    genres: new FormControl('', [Validators.required, Validators.maxLength(200)])
+    genres: new FormControl('', [Validators.required])
   });
 
   constructor(private service: MoviesService) {}
@@ -40,4 +41,5 @@ export class AddMovieComponent {
 
     this.service.postData(movie);
   }
+
 }
