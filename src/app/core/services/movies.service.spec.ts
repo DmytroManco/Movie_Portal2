@@ -28,7 +28,7 @@ describe('MoviesService', () => {
     };
 
     movieIdMock = 2456565;
-    httpMock = jasmine.createSpyObj('httpMock', ['get', 'put']);
+    httpMock = jasmine.createSpyObj('httpMock', ['get', 'put', 'post']);
     mockServerResponse = jasmine.createSpyObj('mockServerResponse', ['json']);
     mockMapResponse = jasmine.createSpyObj('mockMapResponse', ['map']);
     mockRouter = jasmine.createSpyObj('Router', ['navigate']);

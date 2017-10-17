@@ -1,30 +1,18 @@
-.movie-preview{
-  padding: 10px;
-  height: 100%;
+.mp__wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 
-  .movie__title{
-    color: #00838F;
+  @media screen and (max-width: 699px) {
+    flex-flow: row wrap;
   }
 
-  .movie__title::after{
-    content: '';
-    display: block;
-    clear: both;
+  .mp__poster{
+
   }
 
-  .left-side{
-    width: 30%;
-    float: left;
-    .movie-preview__poster{
-      max-width: 400px;
-      height: 500px;
-      margin: 20px auto;
-    }
-  }
-
-  .right_side{
-    float: right;
-    width: 70%;
+  .mp__info{
+    margin-left: 40px;
 
     div{
       margin: 20px 0;

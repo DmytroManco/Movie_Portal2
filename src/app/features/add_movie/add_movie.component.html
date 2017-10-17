@@ -28,6 +28,7 @@
         <td>
           <div *ngIf="movieForm.invalid && (movieForm.dirty || movieForm.touched)">
             <span *ngIf="movieForm.controls.poster.errors?.required">Required filed</span>
+            <span *ngIf="movieForm.controls.poster.errors?.pattern">Incorrect url</span>
           </div>
         </td>
       </tr>

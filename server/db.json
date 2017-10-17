@@ -4,7 +4,7 @@
       "id": 1,
       "title": "The Shawshank Redemption",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SY500_CR0,0,336,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 19,
       "genres": [
         "Crime",
@@ -40,7 +40,7 @@
       "id": 3,
       "title": "The Godfather: Part II",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZiNzIxNTQtNDc5Zi00YWY1LThkMTctMDgzYjY4YjI1YmQyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,351,500_AL_.jpg",
-      "stars": 5,
+      "stars": 3,
       "likes": 13,
       "genres": [
         "Crime",
@@ -58,7 +58,7 @@
       "id": 4,
       "title": "The Dark Knight",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "stars": 4,
+      "stars": 5,
       "likes": 11,
       "genres": [
         "Crime",
@@ -148,7 +148,7 @@
       "id": 9,
       "title": "Il buono, il brutto, il cattivo",
       "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
-      "stars": 5,
+      "stars": 4,
       "likes": 30,
       "genres": [
         "Adventure"
