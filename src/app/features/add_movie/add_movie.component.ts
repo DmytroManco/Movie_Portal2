@@ -11,12 +11,12 @@ import { MoviesService } from '../../core/services/movies.service';
 export class AddMovieComponent {
   // public movie: Movie;
   public movieForm = new FormGroup({
-    title: new FormControl('', Validators.required),
-    poster: new FormControl('', Validators.required),
-    description: new FormControl('', Validators.required),
-    director: new FormControl('', Validators.required),
-    actors: new FormControl('', Validators.required),
-    genres: new FormControl('', Validators.required)
+    title: new FormControl('', [Validators.required]),
+    poster: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
+    director: new FormControl('', [Validators.required]),
+    actors: new FormControl('', [Validators.required]),
+    genres: new FormControl('', [Validators.required, Validators.maxLength(200)])
   });
 
   constructor(private service: MoviesService) {}

@@ -3,31 +3,77 @@
   <form [formGroup]="movieForm" (submit)="postData(movieForm, $event)" class="movie-form">
 
     <table class="movie-form__table">
+
       <tr>
-        <td><label for="add__title">Movie Title</label></td>
-        <td><input type="text" id="add__title" name="movie-title" formControlName="title"></td>
+        <td>
+          <label for="add__title">Movie Title</label>
+        </td>
+        <td>
+          <input type="text" id="add__title" name="movie-title" formControlName="title">
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.title.errors?.required">Required filed</span>
+        </td>
       </tr>
 
       <tr>
-        <td> <label for="add__posterUrl">Movie poster url</label></td>
-        <td><input type="url" id="add__posterUrl" name="poster-url" formControlName="poster"></td>
+        <td>
+          <label for="add__posterUrl">Movie poster url</label>
+        </td>
+        <td>
+          <input type="url" id="add__posterUrl" name="poster-url" formControlName="poster">
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.poster.errors?.required">Required filed</span>
+        </td>
       </tr>
 
       <tr>
-        <td><label for="add__director">Director</label></td>
-        <td><input type="text" id="add__director" name="add director" formControlName="director"></td>
+        <td>
+          <label for="add__director">Director</label>
+        </td>
+        <td>
+          <input type="text" id="add__director" name="add director" formControlName="director">
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.director.errors?.required">Required filed</span>
+        </td>
       </tr>
+
       <tr>
-        <td><label for="add__actors">Actors</label></td>
-        <td><input type="text" id="add__actors" name="add actors" formControlName="actors"></td>
+        <td>
+          <label for="add__actors">Actors</label>
+        </td>
+        <td>
+          <input type="text" id="add__actors" name="add actors" formControlName="actors">
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.actors.errors?.required">Required filed</span>
+        </td>
       </tr>
+
       <tr>
-        <td><label for="add__genres">Genres</label></td>
-        <td><input type="text" id="add__genres" name="add__genres" formControlName="genres"></td>
+        <td>
+          <label for="add__genres">Genres</label>
+        </td>
+        <td>
+          <input type="text" id="add__genres" name="add__genres" formControlName="genres">
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.genres.errors?.required">Required filed</span>
+        </td>
       </tr>
+
       <tr>
-        <td><label for="add__description">Add movie description</label> </td>
-        <td><textarea name="movie description" id="add__description" formControlName="description"></textarea></td>
+        <td>
+          <label for="add__description">Add movie description</label>
+        </td>
+        <td>
+          <textarea name="movie description" id="add__description" formControlName="description"></textarea>
+        </td>
+        <td>
+          <span *ngIf="movieForm.controls.description.errors?.required">Required filed</span>
+        </td>
       </tr>
     </table>
 
