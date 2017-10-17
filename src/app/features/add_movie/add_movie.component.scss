@@ -1,0 +1,26 @@
+.movie-form{
+  width: 600px;
+  margin: 20px auto;
+
+  .movie-form__table{
+
+    tr{
+      height: 50px;
+
+      td label{
+        font-weight: bold;
+      }
+
+      td input{
+        height: 1.3em;
+        font-size: 1.1em;
+        padding: 10px;
+      }
+
+      td input, td textarea {
+        border-radius: 5px;
+        border: 1px solid #00BCD4;
+      }
+    }
+  }
+}

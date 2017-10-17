@@ -1,10 +1,11 @@
 <mp-layout>
   <div class="container">
     <div class="movies__controls">
-      <h3 class="centered">Filter :</h3>
+      <h3 class="centered">Filter:</h3>
       <mp-filter-btn (onclickHandler)="sortMovies('likes')">By Likes</mp-filter-btn>
       <mp-filter-btn (onclickHandler)="sortMovies('stars')">By Rating</mp-filter-btn>
       <mp-search-filter (onSearch)="searchMovie($event)"></mp-search-filter>
+      <h5 class="centered"><a href="/addmovie">Add New Movie</a></h5>
     </div>
 
     <div class="movies__list">

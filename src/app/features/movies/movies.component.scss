@@ -3,10 +3,19 @@
   flex-flow: row wrap;
   justify-content: center;
 
-  .movies__control {
+  .movies__controls {
 
-    h3{
+    h3, h5{
       margin-bottom: 0;
+    }
+
+    h5 a{
+      text-decoration: none;
+      color: #00838F;
+
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 

@@ -1,8 +1,8 @@
 <mp-layout>
 
-  <form [formGroup]="movieForm" (submit)="postData(movieForm, $event)">
+  <form [formGroup]="movieForm" (submit)="postData(movieForm, $event)" class="movie-form">
 
-    <table>
+    <table class="movie-form__table">
       <tr>
         <td><label for="add__title">Movie Title</label></td>
         <td><input type="text" id="add__title" name="movie-title" formControlName="title"></td>
@@ -14,7 +14,7 @@
       </tr>
 
       <tr>
-        <td><label for="add__director">Director: </label></td>
+        <td><label for="add__director">Director</label></td>
         <td><input type="text" id="add__director" name="add director" formControlName="director"></td>
       </tr>
       <tr>
@@ -32,8 +32,7 @@
     </table>
 
     <button type="submit" [disabled]="movieForm.invalid">Add Movie!</button>
+    <br> <br>
+    <a href="/movies">Go to Movie List</a>
   </form>
-
-
-  <a href="/movies">Home</a>
 </mp-layout>
