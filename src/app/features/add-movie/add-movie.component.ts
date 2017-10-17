@@ -3,9 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MoviesService } from '../../core/services/movies.service';
 
 @Component({
-  selector: 'mp-addMovie',
-  templateUrl: 'add_movie.component.html',
-  styleUrls: ['add_movie.component.scss'],
+  selector: 'mp-add-movie',
+  templateUrl: 'add-movie.component.html',
+  styleUrls: ['add-movie.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class AddMovieComponent {

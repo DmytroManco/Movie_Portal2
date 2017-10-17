@@ -1,4 +1,4 @@
-import { FilterButtonComponent } from './filter_button.component';
+import { FilterButtonComponent } from './filter-button.component';
 
 describe('FilterButtonComponent', () => {
   let sut: any;

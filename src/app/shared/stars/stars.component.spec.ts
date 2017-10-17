@@ -3,14 +3,14 @@ import { StarsComponent } from './stars.component';
 describe('StarsComponent', (): void => {
   let sut: any;
   let changeRateParam: any;
-  let onChangeRateSpy: jasmine.Spy;
+  let changeRateSpy: jasmine.Spy;
 
   beforeEach(() => {
     sut = new StarsComponent();
     changeRateParam = {rate: 2};
-    onChangeRateSpy = spyOn(sut.onChangeRate, 'emit');
+    changeRateSpy = spyOn(sut.changeRate, 'emit');
 
-    sut.changeRate(changeRateParam);
+    sut.onChangeRate(changeRateParam);
   });
 
   it('Should match interface', () => {
@@ -22,7 +22,7 @@ describe('StarsComponent', (): void => {
   });
 
   it('Should emit rating', () => {
-    expect(onChangeRateSpy).toHaveBeenCalledWith(changeRateParam.rate);
+    expect(changeRateSpy).toHaveBeenCalledWith(changeRateParam.rate);
   });
 
   describe('#NgOnInit', () => {

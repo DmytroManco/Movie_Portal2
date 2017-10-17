@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MoviesModule } from './movies';
 import { NoContentModule } from './no-content';
-import { AddMovieModule } from './add_movie/index';
+import { AddMovieModule } from './add-movie/index';
 
 @NgModule({
   imports: [

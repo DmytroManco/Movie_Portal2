@@ -1,4 +1,4 @@
-<span [class]="className" *ngFor="let star of stars" (click)="changeRate(star)"
+<span [class]="className" *ngFor="let star of stars" (click)="onChangeRate(star)"
       [className]="(movie?.stars >= star.rate) ? 'star star--active': 'star'" >
   &#9733;
 </span>

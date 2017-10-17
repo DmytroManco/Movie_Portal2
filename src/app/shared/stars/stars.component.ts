@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation, Output, OnInit, EventEmitter, Input } from '@angular/core';
 import { Star } from './star.model';
-import { Movie } from '../../features/movies/movie.model';
+import { Movie } from '../movie-model/movie.model';
 
 @Component({
   selector: 'mp-stars',
@@ -15,7 +15,7 @@ export class StarsComponent implements OnInit {
   @Input() public movie: Movie;
   @Input() public className: string = 'star';
 
-  @Output() public onChangeRate: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public changeRate: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() {}
 
@@ -23,8 +23,8 @@ export class StarsComponent implements OnInit {
     this.makeStarsArray();
   }
 
-  private changeRate(star: Star): void {
-    this.onChangeRate.emit(star.rate);
+  private onChangeRate(star: Star): void {
+    this.changeRate.emit(star.rate);
   }
 
   private makeStarsArray(): Star[] {

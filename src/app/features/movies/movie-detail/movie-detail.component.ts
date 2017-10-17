@@ -1,14 +1,14 @@
 import { Component, ViewEncapsulation, Input, OnInit, OnDestroy } from '@angular/core';
 import 'rxjs/Rx';
-import { Movie } from '../movie.model';
+import { Movie } from '../../../shared/movie-model/movie.model';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { MoviesService } from '../../../core/services/movies.service';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'mp-movies-detail',
-  templateUrl: './movie_detail.component.html',
-  styleUrls: ['./movie_detail.component.scss'],
+  templateUrl: 'movie-detail.component.html',
+  styleUrls: ['movie-detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class MovieDetailComponent implements OnInit, OnDestroy  {

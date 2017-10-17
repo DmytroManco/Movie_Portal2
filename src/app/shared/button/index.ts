@@ -1,2 +1,2 @@
-export * from './filter_button.component';
-export * from './filter_button.module';
+export * from './filter-button.component';
+export * from './filter-button.module';

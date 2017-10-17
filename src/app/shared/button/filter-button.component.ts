@@ -2,8 +2,8 @@ import { Component, ViewEncapsulation, Output, EventEmitter } from '@angular/cor
 
 @Component({
   selector: 'mp-filter-btn',
-  templateUrl: './filter_button.component.html',
-  styleUrls: ['./filter_button.component.scss'],
+  templateUrl: 'filter-button.component.html',
+  styleUrls: ['filter-button.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class FilterButtonComponent {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FilterButtonModule } from './button';
 import { LikesModule } from './likes';
-import { SearchModule } from './search_input';
+import { SearchModule } from './search-input';
 import { StarsModule } from './stars';
 import { LayoutModule } from './layout';
 

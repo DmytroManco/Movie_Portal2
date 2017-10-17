@@ -59,7 +59,7 @@ describe('MoviesComponent', () => {
     expect(sut.movieSelect).toBeDefined();
     expect(sut.sortMovies).toBeDefined();
     expect(sut.searchMovie).toBeDefined();
-    expect(sut.changeRate).toBeDefined();
+    expect(sut.onChangeRate).toBeDefined();
     expect(sut.gotoDetail).toBeDefined();
   });
 
@@ -139,7 +139,7 @@ describe('MoviesComponent', () => {
     beforeEach(() => {
       sut.selectedMovie = movieMock;
       rating = 2;
-      sut.changeRate(rating);
+      sut.onChangeRate(rating);
     });
 
     it('Should call service.updateMovie with selected movie param', () => {

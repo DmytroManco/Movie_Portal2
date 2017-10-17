@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FilterButtonComponent } from './filter_button.component';
+import { FilterButtonComponent } from './filter-button.component';
 
 @NgModule({
   declarations: [

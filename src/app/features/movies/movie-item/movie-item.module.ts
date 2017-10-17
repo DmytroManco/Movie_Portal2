@@ -1,20 +1,14 @@
 import { NgModule } from '@angular/core';
-import { MovieDetailComponent } from './movie_detail.component';
+import { MovieItemComponent } from './movie-item.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from '../../../shared/index';
 
 @NgModule({
-  declarations: [
-    MovieDetailComponent
-  ],
+  declarations: [MovieItemComponent],
   imports: [
     BrowserModule,
     SharedModule
   ],
-  providers: [
-  ],
-  exports: [
-    MovieDetailComponent
-  ]
+  exports: [MovieItemComponent]
 })
-export class MovieDetailItemModule { }
+export class MovieItemModule { }

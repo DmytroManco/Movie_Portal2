@@ -1,4 +1,4 @@
-import { MovieItemComponent } from './movie_item.component';
+import { MovieItemComponent } from './movie-item.component';
 
 describe('MovieItemComponent', () => {
   let sut: any;
@@ -6,7 +6,7 @@ describe('MovieItemComponent', () => {
   let onGotoDetailSpy: jasmine.Spy;
   let onMovieSelectSpy: jasmine.Spy;
   let onLikeChangeSpy: jasmine.Spy;
-  let onChangeRateSpy: jasmine.Spy;
+  let changeRateSpy: jasmine.Spy;
 
   let gotoDetailParam: number;
   let changeLikeParam: boolean;
@@ -17,7 +17,7 @@ describe('MovieItemComponent', () => {
     onGotoDetailSpy = spyOn(sut.onGotoDetail, 'emit');
     onMovieSelectSpy = spyOn(sut.onMovieSelect, 'emit');
     onLikeChangeSpy = spyOn(sut.onLikeChange, 'emit');
-    onChangeRateSpy = spyOn(sut.onChangeRate, 'emit');
+    changeRateSpy = spyOn(sut.changeRate, 'emit');
 
     gotoDetailParam = 10;
     changeLikeParam = false;
@@ -25,7 +25,7 @@ describe('MovieItemComponent', () => {
 
     sut.gotoDetail(gotoDetailParam);
     sut.changeLikes(changeLikeParam);
-    sut.changeRate(changeRateParam);
+    sut.onChangeRate(changeRateParam);
   });
 
   it('Should match interface', () => {
@@ -49,7 +49,7 @@ describe('MovieItemComponent', () => {
   });
 
   it('Should emit rate and selectedMovie', () => {
-    expect(onChangeRateSpy).toHaveBeenCalledWith(changeRateParam);
+    expect(changeRateSpy).toHaveBeenCalledWith(changeRateParam);
     expect(onMovieSelectSpy).toHaveBeenCalled();
   });
 });

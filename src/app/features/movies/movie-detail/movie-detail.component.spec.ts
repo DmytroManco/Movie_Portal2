@@ -1,4 +1,4 @@
-import { MovieDetailComponent } from './movie_detail.component';
+import { MovieDetailComponent } from './movie-detail.component';
 
 describe('MovieDetailComponent', () => {
   let sut: any;
@@ -44,7 +44,6 @@ describe('MovieDetailComponent', () => {
     };
 
     sut = new MovieDetailComponent(serviceSpy, routeSpy);
-    // sut.movie = movieMock;
   });
 
   it('Should match interface', () => {
